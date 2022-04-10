@@ -1,0 +1,124 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0px;
+  }
+
+@font-face {
+    font-family: manrope-regular;
+    src: url(Resources/Fonts/Manrope-Regular.ttf);
+}
+
+#pagina-animale {
+    display: flex;
+    flex-direction: row;
+}
+
+#bara-filtre {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    margin-left: 10px;
+    border: solid black 1px;
+}
+
+#bara-filtre > h1 {
+    flex-wrap: wrap;
+    font-size: 40px;
+    color: rgb(24, 24, 24);
+    font-weight: 10px;
+}
+
+
+
+#partea-dreapta-pagina {
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    margin-right: 10px;
+}
+
+/* Bara de sus din partea dreapta*/
+#bara-control {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    overflow: hidden;
+    width: 100%;
+}
+
+/* Butonul care selecteaza dupa ce fac sortarea elementelor din pagina */
+#buton-sortare {
+    width: auto;
+    margin: 10px;
+    align-content: center;
+    line-height: 30px;
+    background-color: rgb(133, 133, 133);
+    border-radius: 5px;
+}
+
+/* Clasa celor 2 butoane dupa care imi voi schimba tipul de afisare pe pagina */
+.butoane-afisare-grid {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    overflow: hidden;
+}
+
+/* Crearea celor 2 butoane */
+.butoane-afisare-grid > div {
+    position: relative;
+    width: 30px;
+    margin: 10px;
+    align-content: center;
+    line-height: 30px;
+    background-color: rgb(133, 133, 133);
+    border-radius: 5px;
+}
+
+/* Partea unde voi avea casetele cu fiecare animal in parte afisat in functie de filtre */
+#animale-casute {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-right: 10px;
+    overflow: hidden;
+    align-items: center;
+    align-content: space-around;
+    justify-content: center;
+    background-color: aqua;
+}
+
+/* definirea unei casete cu un animal in ea */
+.casuta-animal {
+    margin: 20px;
+    position: relative;
+    /* flex-direction: row; */
+    border: solid black 1px;
+    border-radius: 10px;
+    width:25%;
+}
+
+/* numele animalului ce va aparea in caseta */
+.nume-animal {
+    /* position: absolute; */
+    align-content: center;
+}
+
+
+/* editarea continutului paginii in functie de dimensiunea dispozitivului */
+@media only screen and (max-width:800px) {
+    #pagina-animale {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #bara-filtre {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-left: 10px;
+        margin-right: 10px;
+        border: solid black 1px;
+    }
+}
