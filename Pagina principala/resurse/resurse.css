@@ -2,16 +2,19 @@
     font-family: Helvetica, Arial, sans-serif;
     margin: 0;
     padding: 0;
+    color: #00291f;
     /*background-color: #d80c0c;*/
   }
 
 .background {
-      background-color: #74db85;
+      background-color: #ebfff7;
   }
 
   /* Add a black background color to the top navigation */
 .topnav {
-    background-color: #5bb454;
+    position: sticky;
+    top: 0;
+    background-color: #769385;
     text-align: center;
     overflow: hidden;
   }
@@ -20,7 +23,7 @@
   .topnav a {
     display : inline-block;
     position: relative;
-    color: #f2f2f2;
+    color: #00291f;
     padding: 14px 16px;
     text-decoration: none;
     font-size: 20px;
@@ -35,7 +38,7 @@
   
   /* Change the color of links on hover */
   .topnav a:hover {
-    background-color: #368e36;
+    background-color: #637e71;
   }
   
   /* Add a color to the active/current link */
@@ -44,21 +47,30 @@
     color: white;
   }
 
+  @media screen and (max-width: 800px) {
+    .topnav a {
+      float:none;
+      width: 100%;
+    }
+  }
+
   #intro {
-    background-image:linear-gradient(to bottom,rgba(255, 255, 255, 0) 0%,
-    rgba(255, 255, 255, 0.8) 100%), url('tigru.jpg');
+    background-image:linear-gradient(to bottom,rgba(99, 49, 226, 0) 0%,
+    #ebfff7 100%), url('tigru.jpg');
     background-size: cover;
     background-position: center;
     height: 100vh;
   }
 
   .title{
+    color:#00291f;
     font-size: 40px;
     text-align: center;
     margin: 20px;
   }
 
   .text{
+      color : #00291f;
       font-size:17;
       text-align: center;
       padding-left: 100px;
