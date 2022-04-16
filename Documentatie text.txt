@@ -1,0 +1,104 @@
+1. Introduction
+1.1 Purpose
+Produsul descris în raportul curent este site-ul de prezentare al gradinii zoologice din Iasi. Astfel prin intermediul platformei, posibilii vizitatori au ocazia sa acceseze informatii privind animalele prezente in gradina zoologica. Pe langa aceasta, au posibilitatea de a vizualiza harta interactiva a gradinii, precum si rezervarea online de bilete.
+1.2 Intended Audience and Reading Suggestions
+Documentul este realizat cu scopul documentarii mijloacelor tehnice utilizate in realizarea site-ului web. In document vom pune la dispozitie informatii cu privire la arhitectura folosita cat si detalii referitoare la principalele functionalitati impreuna cu modul de implementare al acestora. Este sugerat ca cititorii documentului sa detina cunostine tehnice in domeniul web pentru a intelege implementarile descrise. Pentru cititorii interesati doar de aspectele tehnice ale produsului, se recomanda citirea sectiunilor 3, 4 si 5 din documentul curent, sectiunile 1 si 2 fiind dedicate descrierii superficiale a produsului.
+ 
+1.3 Product Scope
+
+Scopul produsului este sa ofere posibililor vizitatori o modalitate usoara de a accesa informatiile cu provire la gradina zoologica, precum adresa, programul de vizitare sau contact, dar si animalele prezente in gradina zoologica. 
+Navigarea pe site perminte utilizatorilor sa acceseze pagina de prezentare specifica fiecarui animal, atat prin harta interactiva cat si prin intermediul catalogului de prezentare care permite filtrarea animalelor pe baza diferitor criterii.
+Produsul este conceput, nu doar pentru vizitatori, ci si pentru personalul gradinii, facand posibila posibile actiuni de stergere si adaugare a noi animale, pentru a actualiza informatiile in concordanta schimbarile din gradina zoologica.
+
+Overall Description
+2.1 Product Perspective
+Site-ul descris este un produs de sine statator, realizat pentru nevoile specifice gradinii zoologice din Iasi. Intrucat aceasta urmeaza sa fie deschisa publicului in curand pentru prima data, este necesar ca produsul sa fie unul nou, adaptat standardelor atat din industria web cat si celor din industria turismului urban.
+2.2 Product Functions
+Principalele functii indeplinite de site-ul web constau in: afisarea informatiilor generale despre gradina zoologica pe pagina principala, navigarea catre celelate functionalitati prin intermediul meniului, accesarea paginilor specifice fiecarui animal utilizand harta interactiva sau catalogul, precum si functionalitati de filtrare si sortare a acestuia. Utilizatorii vor putea sa rezerve, prin intermediul site-ului, bilete online pentru tururi cu un ghid al gradinii zoologice. Pentru a putea rezerva bilete, utilizatorului i se va cere intai sa isi creeze un cont sau sa se conecteze cu un cont deja existent.
+Pentru o usoara mentenata a informatiilor de pe site, am creat si un set de functii accesibile doar personalului autorizat, pentru a putea efectua operatiuni de adaugare si stergere a datelor despre animale. Pentru a accesa aceste optiuni, personalul se va autentifica pe site utilizand credentiale specifice, furnizate de conducerea gradinii zoologice.
+
+ 
+2.3 User Classes and Characteristics
+Site-ul este conceput pentru doua tipuri de utilizatori: utilizatorii obisnuiti si utilizatori autorizati.
+
+2.3.1
+	Utilizatorii obisnuiti pot fi atat adulti care pot accesa site-ul pentru a planifica o excursie la gradina zoologica prin functia de rezervare a biletelor, dar si copii care isi pot satisface curiozitatile despre animalele preferate citind paginile dedicate acestora.
+2.3.2
+Utilizatorii autorizati sunt alesi din personalul gradinii zoologice pentru a executa operatiuni de editare a datelor despre animale. Platforma de editare a informatiilor este conceputa pentru a fi utilizata si de persoane fara cunostinte tehnice in domeniul web. Pentru a accesa aceasta platforma, utilizatorii autorizati se vor autentifica utilizand seturi de credentiale speciale, furnizate de administratia gradinii zoologice.
+
+ 
+2.4 Operating Environment
+***
+Deoarece produsul este un site web, nu vor fi intampinate probleme de adaptare la sistemul de pe operare al masinii de pe care se va face accesul la site. Acesta va fi accesibil pe un domeniu public, din principalele motoare de cautare (Chrome, Opera, Mozilla, Edge) si va furniza informatii stocate in baza de date. Comunicarea dintre cele doua componente se va realiza printr-un server cu implementare proprie. 
+ 
+2.5 Design and Implementation Constraints
+Constrangerile legate de implementare constau in crearea produsului fara a utiliza framework-uri web existente, functionalitatie oferite de acestea fiind implementate de programatori in moduri proprii, specifice proiectului. Aceste constrangeri se aplica atat pe partea de interfata grafica cat si la componenta de server.
+ 
+2.6 User Documentation
+Documentatia produsului va consta in instructiuni de utilizare a functiilor administrative dedicate personalului gradinii zoologice.
+External Interface Requirements
+3.1 User Interfaces
+3.1.1 Componentele interfetei
+Interactiunea cu utilizatorul se va face prin intermediul paginilor care compun site-ul. Pentru a indeplini cerintele necesare unei gradini zoologice, am decis ca paginile web implementate sa fie urmatoarele: pagina principala, pagina catalogului cu animale, pagina specifica fiecarui animal, pagina de conectare sau creare a contului, pagina de rezervare a biletelor si pagina dedicata administratorilor gradinii zoologice.
+Interactiunile dintre pagini vor fi descrise in sectiunea 4.
+
+3.1.2 Caracteristicile componentelor
+
+
+
+Describe the logical characteristics of each interface between the software product and the users. This may include sample screen images, any GUI standards or product family style guides that are to be followed, screen layout constraints, standard buttons and functions (e.g., help) that will appear on every screen, keyboard shortcuts, error message display standards, and so on. Define the software components for which a user interface is needed. Details of the user interface design should be documented in a separate user interface specification.
+3.2 Hardware Interfaces
+Componentele hardware implicate in functionarea produsului sunt serverul web si discpozitivul de pe care se acceseaza site-ul. Serverul web va contine baza de date pe care sunt stocate informatiile disponibile pe site. Acesta va furniza informatiile disponibile, cerute de utilizator prin intermediul site-ului, care mai apoi vor fi afisate in formatul unor pagini web. Comunicarea cu site-ul se va face utilizand protocolul HTTP. La nivel de dispozitive care pot fi utilizate, orice dispozitiv cu acces la un browser web va putea accesa site-ul.
+ 
+3.3 Software Interfaces
+***
+3.3.1 Motor de cautare
+La nivel de tehnologii software, produsul este conceput pentru cele mai utilizate motoare de cautare precum Chrome, Opera, Mozilla sau Edge si va utiliza serviciile acestora pentru a accesa site-ul si pentru a comunica cu serverul utilizand protocolul HTTP. 
+3.3.2 Server
+Implementarea serverului este facuta utilizand PHP ca limbaj de programare, fiind o implementare proprie a echipei. Acesta are ca rol accesarea bazei de date pentru a completa paginile web accesate cu informatiile necesare. Paginile web for fi disponibile in formatul unor sabloane. Campurile specifice fiecarui sablont  sunt completate cu datele primite de server si apoi incarcate in browser pentru a fi vizualizate de utilizator.
+3.3.3 Baza de date
+Baza de date utilizata este Oracle Database. Aceasta va contine un tabel cu inforamtiile disponibile, precum si etichetele care pot fi aplicate in momentul filtrarii, specifice fiecarui animal. Pe langa acest tabel, mai sunt prezente tabelul cu informatii despre ghizii disponibili pentru tururile de prezentare pentru care se vor putea inchiria bilete; si tabelul cu informatii criptate legate de datele de conectare ale utilizatorilor.
+ 
+3.4 Communications Interfaces
+La baza comunicarii intre site si server se afla protocolul HTTP. Motorul de cautare trimite apeluri de tip “HTTP Request” catre server, si primeste semnale “HTTP Response” de la acesta.
+Cererile clientului pot fi cereri de informatii din baza de date (ex: informatiile despre un anumit animal), sau cereri pentru a scrie informatii in baza de date (ex: inregistrarea unor noi utilizatori in baza de date).
+Raspunsul serverlui consta intr-un set de date citite din baza de date si trimise la pagina care a facut cererea, pentru a fi afisate. Aceste seturi de date sunt de tip siruri de caractere si contin informatii despre animale, informatii despre gradina zoologica sau adresele pozelor afisate pe paginile web.
+
+Describe the requirements associated with any communications functions required by this product, including e-mail, web browser, network server communications protocols, electronic forms, and so on. Define any pertinent message formatting. Identify any communication standards that will be used, such as FTP or HTTP. Specify any communication security or encryption issues, data transfer rates, and synchronization mechanisms.
+ 
+System Features
+4.1 Pagina principala
+
+La accesarea site-ului, utilizatorul va fi directionat catre Pagina Principala. Aici se va gasi meniul prin care se pot accesa toate celelate pagini utile. Continutul paginii principale consta in informatii generale despre gradina zoologica, harta interactiva a gradinii si cai sugestive de redirectionare spre alte componente de interes pentru utilizatori precum catalogul de prezentare a animalelor sau pagina de rezervare a biletelor.. 
+
+4.2 Vizualizarea catalogului cu animale
+Pe aceasta pagina sa poate ajunge prin apasarea butonului din meniu sau direct din pagina principala. Aici vor fi initial vizibile toate animalele din gradina zoologica, precum si un meniu de filtrare a acestora dupa anumite trasaturi. Dupa alegerea criteriilor de filtrare, utilizatorul va apasa butonul “Filtreaza” si vor fi incarcate doar animalele care indeplinesc criteriile selectate. Apasand pe chenarul dedicat unui animal, utiliatorul va accesa pagina de prezentare a acestuia.
+
+4.3 Pagina de prezentare a unui animal
+
+Navigarea pe aceasta pagina face ofera utilizatorului acces la informatii privitoare la animalul selectat, legate de supravietuirea lui in natura dar si despre viata lor din gradina zoologica. Informatiile vor fi insotite de poze sugestive pentru fiecare paragraf. De pe aceasta pagina utilizatorul va putea naviga atat inapoi la pagina principala, cat si la celelalte pagini disponibile in meniu.
+
+4.4 Rezervarea biletelor
+Pentru a accesa aceasta functie, utilizatorul va fi nevoit sa se conecteze cu un cont deja existent sau sa isi creeze unul nou. Dupa acest pas, utilizatorul isi va putea rezerva un numar de bilete pentru unul dintre tururile de prezentare oferite  de ghizii gradinii, il limita disponibilitatii acestora.
+
+4.5 Crearea contului si conectarea
+In pagina de conectare, utilizatorul se va conecta utilizant o adresa de email si parola dedicata acestuia, daca exista deja un cont inregistrat cu aceasta adreasa. Daca nu, va exista optiunea de a crea un cont nou, completand un formular cu informatii relevante precum adresa de email, numar de telefon si nume.
+
+
+ 
+Other Nonfunctional Requirements
+5.1 Performance Requirements
+Cerintele de performanta pentru produs sunt vor consta prin indeplinirea functiilor descrise anterior, totodata cu obtinerea unui punctaj de minim 90 de puncte folosind instrumentul de calcul disponibil aici: https://web.dev/measure/.
+ 
+5.2 Safety Requirements
+Din punct de vedere al sigurantei site-ului, va trebui sa ne asiguram ca inforamtiile disponibile in baza de date nu vor fi alterate in niciun fel, intrucat acestea stau la baza incarcarii paginilor. Pentru a ne asigura de aceste aspecte, vom restrictiona accesul direct la baza de date al utilizatorului sau a presonalului administrativ al gradinii. Comunicarea cu baza de date se va face doar prin intermediul mijloacelor implementate de echipa noastra. 
+ 
+5.3 Security Requirements
+Securiatea utilizatorilor este importanta, de aceea la datele despre urilizatori vor fi scrise in baza de date in mod criptat, printr-un proces de criptare/decriptare intern, implementat la nivelul serverului de catre echipa noastra.
+ 
+5.4 Business Rules
+List any operating principles about the product, such as which individuals or roles can perform which functions under specific circumstances. These are not functional requirements in themselves, but they may imply certain functional requirements to enforce the rules.
+ 
+ 
+ 
+

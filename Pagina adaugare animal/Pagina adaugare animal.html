@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="Css.css" type="text/css" rel="stylesheet">
+        <title>Gradina zoologica FIMURO</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body class = "background">
+        <div class="topnav">
+            <a href="#loggo" class="loggo"><img src = "poza.png" width = 30px;></a>
+            <a href="#animale">Toate animalele</a>
+            <a href="#program">Program</a>
+            <a href="#harta">Harta</a>
+            <a href="#rezervari">Rezerva un loc!</a>
+            <a href="#echipa">Staff</a>
+        </div> 
+        
+        <form class="form-placement box" >
+            <h1>Adauga animal</h1>
+            <div>
+                <label for="fname">Denumire populara:</label><br>
+                <input type="text" id="denpop" name="denpop" class="text-input"><br>
+            </div>
+
+            <div>
+                <label for="fname">Denumire stiintifica:</label><br>
+                <input type="text" id="densnf" name="densnf" class="text-input"><br>
+            </div>
+
+            <div>
+                <label for="message">Message:</label><br>
+                <textarea name="message" rows="10" cols="30" class="textarea"></textarea>
+            </div>
+            
+            <div>
+                <label for="statut">Statut</label>
+                <select id="statut" name="statut" class="text-input">
+                    <option value="normal">Normal</option>
+                    <option value="protejat">Protejat</option>
+                    <option value="popilatie-redusa">Populatie redusa</option>
+                    <option value="cale-de-disparitie">Pe cale de disparitie</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="clasa">Clasa biologica</label>
+                <select id="clasa" name="clasa">
+                    <option value="mamifer">Mamifer</option>
+                    <option value="amfibian">Amfibian</option>
+                    <option value="reptila">Reptila</option>
+                    <option value="peste">Peste</option>
+                    <option value="pasare">Pasare</option>
+                    <option value="artropod">Artropod</option>
+                    <option value="alta-clasa">Altele</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="habitat">Habitat</label>
+                <select id="habitat" name="habitat">
+                    <option value="alpin">Alpin</option>
+                    <option value="paduri">Paduri</option>
+                    <option value="campie">Campie</option>
+                    <option value="desert">Desert</option>
+                    <option value="jungla">Jungla</option>
+                    <option value="savana">Savana</option>
+                    <option value="tundra">Tundra</option>
+                    <option value="arctic">Arctic</option>
+                    <option value="maritim">Maritim</option>
+                    <option value="apa-dulce">Apa dulce</option>
+                    <option value="mlastina">Mlastina</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="continent">Continent</label>
+                <select id="continent" name="continent">
+                    <option value="europa">Europa</option>
+                    <option value="asia">Asia</option>
+                    <option value="america-nord">America de nord</option>
+                    <option value="america-sud">America de sud</option>
+                    <option value="africa">Africa</option>
+                    <option value="australia">Australia</option>
+                    <option value="antarctica">Antarctica</option>
+                    <option value="ocean">Ocean</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="spandire">Raspandire:</label><br>
+                <textarea name="raspandire" rows="10" cols="30" class="textarea"></textarea>
+            </div>
+
+            <div>
+                <label for="trasaturi">Trasaturi distinctive:</label><br>
+                <textarea name="trasaturi" rows="10" cols="30" class="textarea"></textarea>
+            </div>
+
+            <div>
+                <label for="hrana">Hrana</label>
+                <select id="statut" name="statut">
+                    <option value="carnivor">Carnivor</option>
+                    <option value="omnivor">Omnivor</option>
+                    <option value="erbivor">Erbivor</option>
+                    <option value="alta-hrana">Altele</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="descirere-hrana">Despre hrana:</label><br>
+                <textarea name="descirere-hrana" rows="10" cols="30" class="textarea"></textarea>
+            </div>
+
+            <div>
+                <label for="viata-sociala">Viata sociala</label>
+                <select id="viata-sociala" name="viata-sociala">
+                    <option value="solitar">Solitar</option>
+                    <option value="familie">Familie restransa</option>
+                    <option value="grupuri">Grupuri extinse</option>
+                    <option value="alta-forma-de-socializare">Altele</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="descriere-viata-sociala">Despre viata sociala:</label><br>
+                <textarea name="descriere-viata-sociala" rows="10" cols="30" class="textarea"></textarea>
+            </div>
+
+            <div>
+                <label for="reproducere">Reproducere:</label><br>
+                <textarea name="reproducere" rows="10" cols="30" class="textarea"></textarea>
+            </div>
+
+            <div>
+                <label for="altele">Altele:</label><br>
+                <textarea name="altele" rows="10" cols="30" class="textarea"></textarea>
+            </div>
+        </form>
+
+    </body>
+</html>
