@@ -28,7 +28,6 @@ Utilizatorii autorizati sunt alesi din personalul gradinii zoologice pentru a ex
 
  
 2.4 Operating Environment
-***
 Deoarece produsul este un site web, nu vor fi intampinate probleme de adaptare la sistemul de pe operare al masinii de pe care se va face accesul la site. Acesta va fi accesibil pe un domeniu public, din principalele motoare de cautare (Chrome, Opera, Mozilla, Edge) si va furniza informatii stocate in baza de date. Comunicarea dintre cele doua componente se va realiza printr-un server cu implementare proprie. 
  
 2.5 Design and Implementation Constraints
@@ -42,16 +41,20 @@ External Interface Requirements
 Interactiunea cu utilizatorul se va face prin intermediul paginilor care compun site-ul. Pentru a indeplini cerintele necesare unei gradini zoologice, am decis ca paginile web implementate sa fie urmatoarele: pagina principala, pagina catalogului cu animale, pagina specifica fiecarui animal, pagina de conectare sau creare a contului, pagina de rezervare a biletelor si pagina dedicata administratorilor gradinii zoologice.
 Interactiunile dintre pagini vor fi descrise in sectiunea 4.
 
-3.1.2 Caracteristicile componentelor
+***
+3.1.2 Caracteristicile vizuale ale componentelor
+La nivel de caracteristici vizuale, in aceasta sectiune vom explica alegerile facute la nivel de schema de culori, asezarea elementelor in pagina si font.
+Schema de culori consta in nuante de verde, cu tonuri gri alsese pentru a combina caracteristicile principale ale produsul pe care site-ul il serveste, si anume elemente din natura (verde) in centrul orasului (gri).
+Elementele sunt asezate in paginile web in coloata, navigarea pe pagini facandu-se prin scroll. Meniul ramane mereu in partea de sus a paginii pentru a fi usor accesibila. Textele sunt insotite de imagini sugestive pentru continutul fiecarui paragraf pentru. Paragrafele nu se intind pe intreaga latime a paginii pentru a fi usor de citit si pentru a oferi utilizatorului o viziune de ansambu. 
+Fonutrile sunt alese pentru a nu incarca pagina in mod inutil si pentru a pastra o atmosfera neformala si prietenoasa in navigarea pe pagina.
 
 
 
-Describe the logical characteristics of each interface between the software product and the users. This may include sample screen images, any GUI standards or product family style guides that are to be followed, screen layout constraints, standard buttons and functions (e.g., help) that will appear on every screen, keyboard shortcuts, error message display standards, and so on. Define the software components for which a user interface is needed. Details of the user interface design should be documented in a separate user interface specification.
+ 
 3.2 Hardware Interfaces
 Componentele hardware implicate in functionarea produsului sunt serverul web si discpozitivul de pe care se acceseaza site-ul. Serverul web va contine baza de date pe care sunt stocate informatiile disponibile pe site. Acesta va furniza informatiile disponibile, cerute de utilizator prin intermediul site-ului, care mai apoi vor fi afisate in formatul unor pagini web. Comunicarea cu site-ul se va face utilizand protocolul HTTP. La nivel de dispozitive care pot fi utilizate, orice dispozitiv cu acces la un browser web va putea accesa site-ul.
  
 3.3 Software Interfaces
-***
 3.3.1 Motor de cautare
 La nivel de tehnologii software, produsul este conceput pentru cele mai utilizate motoare de cautare precum Chrome, Opera, Mozilla sau Edge si va utiliza serviciile acestora pentru a accesa site-ul si pentru a comunica cu serverul utilizand protocolul HTTP. 
 3.3.2 Server
