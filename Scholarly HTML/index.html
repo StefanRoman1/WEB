@@ -28,7 +28,7 @@
             <section id="Root">
                 <h3>1.1 Scop</h3>
                 <p>
-                    Produsul descris în raportul curent este site-ul de prezentare al gradinii zoologice din Iași. 
+                    Produsul descris în raportul curent este site-ul de prezentare al grădinii zoologice din Iași. 
                     Astfel prin intermediul platformei, posibilii vizitatori au ocazia să acceseze informații privind animalele prezente 
                     în grădina zoologică. Pe lângă aceasta, au posibilitatea de a vizualiza harta interactivă a grădinii, 
                     precum și rezervarea online de bilete.
@@ -146,19 +146,35 @@
                 <section>
                     <h4>3.1.1 Componentele interfeței</h4>
                     <p>
-                        Interactiunea cu utilizatorul se va face prin intermediul paginilor care compun site-ul. Pentru a indeplini 
-                        cerintele necesare unei gradini zoologice, am decis ca paginile web implementate sa fie urmatoarele: pagina 
-                        principala, pagina catalogului cu animale, pagina specifica fiecarui animal, pagina de conectare sau creare 
-                        a contului, pagina de rezervare a biletelor si pagina dedicata administratorilor gradinii zoologice.
+                        Interacțiunea cu utilizatorul se va face prin intermediul paginilor care compun site-ul. Pentru a îndeplini 
+                        cerințele necesare unei grădini zoologice, am decis ca paginile web implementate să fie următoarele: pagina 
+                        principală, pagina catalogului cu animale, pagina specifică fiecărui animal, pagina de conectare sau creare 
+                        a contului, pagina de rezervare a biletelor și pagina dedicată administratorilor grădinii zoologice.
                     </p>
                     <p>
-                        Interactiunile dintre pagini vor fi descrise in sectiunea 4.
+                        Interacțiunile dintre pagini vor fi descrise în secțiunea <a href="#caracteristicile_sistemului">4</a>.
                     </p>
                 </section>
                 <section>
                     <h4>3.1.2 Caracteristicile componentelor</h4>
                     <p>
-
+                        La nivel de caracteristici vizuale, în această secțiune vom explica alegerile făcute la nivel de schemă de 
+                        culori, așezarea elementelor în pagină și font.
+                    </p>
+                    <p>
+                        Schema de culori constă în nuanțe de verde, cu tonuri gri alese pentru a combina caracteristicile 
+                        principale ale produsul pe care site-ul îl serveste, și anume elemente din natură (verde) în centrul 
+                        orașului (gri).
+                    </p>
+                    <p>
+                        Elementele sunt așezate în paginile web în coloana, navigarea pe pagini făcându-se prin scroll. Meniul rămâne 
+                        mereu în partea de sus a paginii pentru a fi ușor accesibil. Textele sunt însoțite de imagini sugestive pentru 
+                        conținutul fiecarui paragraf. Paragrafele nu se întind pe întreaga lățime a paginii pentru a fi ușor 
+                        de citit și pentru a oferi utilizatorului o viziune de ansambu. 
+                    </p>
+                    <p>
+                        Fonturile sunt alese pentru a nu încărca pagina în mod inutil și pentru a păstra o atmosferă neformală și 
+                        prietenoasă în navigarea pe pagină.
                     </p>
                 </section>
             </section>
@@ -177,27 +193,27 @@
                 <section>
                     <h4>3.3.1 Motor de căutare</h4>
                     <p>
-                        La nivel de tehnologii software, produsul este conceput pentru cele mai utilizate motoare de cautare 
-                        precum Chrome, Opera, Mozilla sau Edge si va utiliza serviciile acestora pentru a accesa site-ul si pentru 
-                        a comunica cu serverul utilizand protocolul HTTP.  
+                        La nivel de tehnologii software, produsul este conceput pentru cele mai utilizate motoare de căutare 
+                        precum Chrome, Opera, Mozilla sau Edge și va utiliza serviciile acestora pentru a accesa site-ul și pentru 
+                        a comunica cu serverul utilizând protocolul HTTP.  
                     </p>
                 </section>
                 <section>
                     <h4>3.3.2 Server</h4>
                     <p>
-                        Implementarea serverului este facuta utilizand PHP ca limbaj de programare, fiind o implementare proprie 
-                        a echipei. Acesta are ca rol accesarea bazei de date pentru a completa paginile web accesate cu informatiile 
-                        necesare. Paginile web for fi disponibile in formatul unor sabloane. Campurile specifice fiecarui sablont 
-                        sunt completate cu datele primite de server si apoi incarcate in browser pentru a fi vizualizate de utilizator.
+                        Implementarea serverului este făcută utilizând PHP ca limbaj de programare, fiind o implementare proprie 
+                        a echipei. Acesta are ca rol accesarea bazei de date pentru a completa paginile web accesate cu informațiile 
+                        necesare. Paginile web vor fi disponibile în formatul unor șabloane. Câmpurile specifice fiecărui șablon 
+                        sunt completate cu datele primite de server și apoi încărcate în browser pentru a fi vizualizate de utilizator.
                     </p>
                 </section>
                 <section>
                     <h4>3.3.3 Bază de date</h4>
                     <p>
-                        Baza de date utilizata este Oracle Database. Aceasta va contine un tabel cu inforamtiile disponibile, 
-                        precum si etichetele care pot fi aplicate in momentul filtrarii, specifice fiecarui animal. Pe langa acest 
-                        tabel, mai sunt prezente tabelul cu informatii despre ghizii disponibili pentru tururile de prezentare 
-                        pentru care se vor putea inchiria bilete; si tabelul cu informatii criptate legate de datele de conectare 
+                        Baza de date utilizata este Oracle Database. Aceasta va conține un tabel cu informțiile disponibile, 
+                        precum și etichetele care pot fi aplicate în momentul filtrării, specifice fiecărui animal. Pe lângă acest 
+                        tabel, mai sunt prezente tabelul cu informații despre ghizii disponibili pentru tururile de prezentare 
+                        pentru care se vor putea închiria bilete; și tabelul cu informații criptate legate de datele de conectare 
                         ale utilizatorilor.
                     </p>
                 </section>
@@ -205,17 +221,17 @@
             <section>
                 <h3>3.4 Interfețe de comunicare</h3>
                 <p>
-                    La baza comunicarii intre site si server se afla protocolul HTTP. Motorul de cautare trimite apeluri de tip 
-                    “HTTP Request” catre server, si primeste semnale “HTTP Response” de la acesta.
+                    La baza comunicării între site și server se află protocolul HTTP. Motorul de căutare trimite apeluri de tip 
+                    “HTTP Request” către server, și primește semnale “HTTP Response” de la acesta.
                 </p>
                 <p>
-                    Cererile clientului pot fi cereri de informatii din baza de date (ex: informatiile despre un anumit animal), 
-                    sau cereri pentru a scrie informatii in baza de date (ex: inregistrarea unor noi utilizatori in baza de date).
+                    Cererile clientului pot fi cereri de informații din baza de date (ex: informațiile despre un anumit animal), 
+                    sau cereri pentru a scrie informații în baza de date (ex: înregistrarea unor noi utilizatori în baza de date).
                 </p>
                 <p>
-                    Raspunsul serverlui consta intr-un set de date citite din baza de date si trimise la pagina care a facut cererea, 
-                    pentru a fi afisate. Aceste seturi de date sunt de tip siruri de caractere si contin informatii despre animale, 
-                    informatii despre gradina zoologica sau adresele pozelor afisate pe paginile web.
+                    Răspunsul serverlui constă într-un set de date citite din baza de date și trimise la pagina care a făcut cererea, 
+                    pentru a fi afișate. Aceste seturi de date sunt de tip șiruri de caractere și contin informații despre animale, 
+                    informații despre grădina zoologică sau adresele pozelor afișate pe paginile web.
                 </p>
             </section>
         </section>
@@ -224,45 +240,45 @@
             <section>
                 <h3>4.1 Pagina principală</h3>
                 <p>
-                    La accesarea site-ului, utilizatorul va fi directionat catre Pagina Principala. Aici se va gasi meniul prin care 
-                    se pot accesa toate celelate pagini utile. Continutul paginii principale consta in informatii generale despre 
-                    gradina zoologica, harta interactiva a gradinii si cai sugestive de redirectionare spre alte componente de 
+                    La accesarea site-ului, utilizatorul va fi direcționat către Pagina Principală. Aici se va găsi meniul prin care 
+                    se pot accesa toate celelate pagini utile. Conținutul paginii principale constă în informații generale despre 
+                    grădina zoologică, harta interactiva a gradinii și căi sugestive de redirecționare spre alte componente de 
                     interes pentru utilizatori precum catalogul de prezentare a animalelor sau pagina de rezervare a biletelor.
                 </p>
             </section>
             <section>
                 <h3>4.2 Vizualizarea catalogului cu animale</h3>
                 <p>
-                    Pe aceasta pagina sa poate ajunge prin apasarea butonului din meniu sau direct din pagina principala. Aici 
-                    vor fi initial vizibile toate animalele din gradina zoologica, precum si un meniu de filtrare a acestora dupa 
-                    anumite trasaturi. Dupa alegerea criteriilor de filtrare, utilizatorul va apasa butonul “Filtreaza” si vor fi 
-                    incarcate doar animalele care indeplinesc criteriile selectate. Apasand pe chenarul dedicat unui animal, 
-                    utiliatorul va accesa pagina de prezentare a acestuia
+                    Pe această pagină sa poate ajunge prin apasarea butonului din meniu sau direct din pagina principală. Aici 
+                    vor fi inițial vizibile toate animalele din grădina zoologică, precum și un meniu de filtrare a acestora după 
+                    anumite trăsături. După alegerea criteriilor de filtrare, utilizatorul va apăsa butonul “Filtrează” și vor fi 
+                    încărcate doar animalele care îndeplinesc criteriile selectate. Apăsând pe chenarul dedicat unui animal, 
+                    utiliatorul va accesa pagina de prezentare a acestuia.
                 </p>
             </section>
             <section>
                 <h3>4.3 Pagina de prezentare a unui animal</h3>
                 <p>
-                    Navigarea pe aceasta pagina face ofera utilizatorului acces la informatii privitoare la animalul selectat, 
-                    legate de supravietuirea lui in natura dar si despre viata lor din gradina zoologica. Informatiile vor fi insotite 
-                    de poze sugestive pentru fiecare paragraf. De pe aceasta pagina utilizatorul va putea naviga atat inapoi la pagina 
-                    principala, cat si la celelalte pagini disponibile in meniu.
+                    Navigarea pe această pagină oferă utilizatorului acces la informații privitoare la animalul selectat, 
+                    legate de supraviețuirea lui în natura, dar și despre viața lor din grădina zoologică. Informațiile vor fi însoțite 
+                    de poze sugestive pentru fiecare paragraf. De pe această pagină utilizatorul va putea naviga atât înapoi la pagina 
+                    principală, cât și la celelalte pagini disponibile în meniu.
                 </p>
             </section>
             <section>
                 <h3>4.4 Rezervarea biletelor</h3>
                 <p>
-                    Pentru a accesa aceasta functie, utilizatorul va fi nevoit sa se conecteze cu un cont deja existent sau sa isi 
-                    creeze unul nou. Dupa acest pas, utilizatorul isi va putea rezerva un numar de bilete pentru unul dintre tururile 
-                    de prezentare oferite  de ghizii gradinii, il limita disponibilitatii acestora.
+                    Pentru a accesa această funcție, utilizatorul va fi nevoit să se conecteze cu un cont deja existent sau să își 
+                    creeze unul nou. După acest pas, utilizatorul își va putea rezerva un număr de bilete pentru unul dintre tururile 
+                    de prezentare oferite de ghizii grădinii, în limita disponibilității acestora.
                 </p>
             </section>
             <section>
                 <h3>4.5 Crearea contului și conectarea</h3>
                 <p>
-                    In pagina de conectare, utilizatorul se va conecta utilizant o adresa de email si parola dedicata acestuia, 
-                    daca exista deja un cont inregistrat cu aceasta adreasa. Daca nu, va exista optiunea de a crea un cont nou, 
-                    completand un formular cu informatii relevante precum adresa de email, numar de telefon si nume.
+                    În pagina de conectare, utilizatorul se va conecta utilizând o adresă de email și parola dedicată acestuia, 
+                    dacă există deja un cont înregistrat cu această adresă. Daca nu, va exista opțiunea de a crea un cont nou, 
+                    completând un formular cu informații relevante precum adresa de email, numărul de telefon și numele.
                 </p>
             </section>
         </section>
@@ -271,19 +287,19 @@
             <section>
                 <h3>5.1 Cerințe de performanță</h3>
                 <p>
-                    Cerintele de performanta pentru produs sunt vor consta prin indeplinirea functiilor descrise anterior, 
-                    totodata cu obtinerea unui punctaj de minim 90 de puncte folosind instrumentul de calcul disponibil 
+                    Cerințele de performanță pentru produs vor consta prin îndeplinirea funcțiilor descrise anterior, 
+                    totodată cu obținerea unui punctaj de minim 90 de puncte folosind instrumentul de calcul disponibil 
                     <a href="https://web.dev/measure/">aici</a>.
                 </p>
             </section>
             <section>
                 <h3>5.2 Cerințe de securitate</h3>
                 <p>
-                    Din punct de vedere al sigurantei site-ului, va trebui sa ne asiguram ca inforamtiile disponibile in baza de 
-                    date nu vor fi alterate in niciun fel, intrucat acestea stau la baza incarcarii paginilor. Pentru a ne asigura 
-                    de aceste aspecte, vom restrictiona accesul direct la baza de date al utilizatorului sau a presonalului 
-                    administrativ al gradinii. Comunicarea cu baza de date se va face doar prin intermediul mijloacelor implementate 
-                    de echipa noastra. 
+                    Din punct de vedere al siguranței site-ului, va trebui să ne asigurăm ca informațiile disponibile în baza de 
+                    date nu vor fi alterate în niciun fel, întrucat acestea stau la baza încărcării paginilor. Pentru a ne asigura 
+                    de aceste aspecte, vom restricționa accesul direct la baza de date al utilizatorului sau a personalului 
+                    administrativ al grădinii. Comunicarea cu baza de date se va face doar prin intermediul mijloacelor implementate 
+                    de echipa noastră. 
                 </p>
             </section>
         </section>
