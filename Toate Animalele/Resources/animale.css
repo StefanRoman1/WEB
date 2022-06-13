@@ -3,6 +3,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    background-color: #d2e9d8;
   }
 
 @font-face {
@@ -14,11 +15,12 @@
     background-color: #ebfff7;
 }
 
+
 /* Meniu */
 .menu {
-    background-color: #769385;
+    background-color: #22a244;
     list-style-type: none;
-    /* position: sticky; */
+    position: sticky;
     font-size: 17px;
     width: 100%;
     height: 80px;
@@ -30,9 +32,11 @@
     text-transform: uppercase;
     padding: 10 15px;
     border-radius: 3px;
+    background-color: #22a244;
 }
 
 .toggle {
+    background-color: #22a244;
     color: #f2f2f2;
     font-size: 30px;
     float: right;
@@ -51,20 +55,32 @@
 
 .toggle:hover {
     background-color:  #0e251a;
+    transition: all .5s;
+}
+
+.toggle i {
+    background-color: #22a244;
+}
+
+.toggle i:hover {
+    background-color:  #0e251a;
     transition: .5s;
 }
 
 .logo {
+    background-color: #22a244;
     width: 115px;
     padding: 15px 0px 15px 40px; 
 }
 
 .menu ul {
+    background-color: #22a244;
     float: right;
     margin-right: 20;
 }
 
 .menu ul li {
+    background-color: #22a244;
     display: inline-block;
     line-height: 80px;
     margin: 0 5px;
@@ -74,6 +90,7 @@
     background-color:  #0e251a;
     transition: .5s;
 }
+
 
 
 /* Add a black background color to the top navigation */
@@ -148,13 +165,49 @@
 #bara-control {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-end;
     overflow: hidden;
     width: 100%;
+    line-height: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#bara-control div {
+    margin-left: 5px;
 }
 
 /* Butonul care selecteaza dupa ce fac sortarea elementelor din pagina */
 #buton-sortare {
+    width: auto;
+    margin: 10px;
+    align-content: center;
+    /* line-height: 30px; */
+}
+
+#buton-sortare p {
+    background-color: #ffffff;
+    padding: 10 5px;
+    border-radius: 5px;
+}
+
+#grid-linie, #grid-patrate {
+    width: auto;
+    align-content: center;
+    margin: 10px;
+}
+
+#grid-linie p, #grid-patrate p{
+    background-color: #ffffff;
+    padding: 10 5px;
+    border-radius: 5px;
+}
+
+
+
+/* Crearea celor 2 butoane */
+.butoane-afisare-grid > div {
+    position: relative;
     width: auto;
     margin: 10px;
     align-content: center;
@@ -163,24 +216,6 @@
     border-radius: 5px;
 }
 
-/* Clasa celor 2 butoane dupa care imi voi schimba tipul de afisare pe pagina */
-.butoane-afisare-grid {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    overflow: hidden;
-}
-
-/* Crearea celor 2 butoane */
-.butoane-afisare-grid > div {
-    position: relative;
-    width: 30px;
-    margin: 10px;
-    align-content: center;
-    line-height: 30px;
-    background-color: rgb(133, 133, 133);
-    border-radius: 5px;
-}
 
 /* Partea unde voi avea casetele cu fiecare animal in parte afisat in functie de filtre */
 #animale-casute {
@@ -233,13 +268,22 @@
 @media only screen and (max-width:850px) {
     .toggle {
         display: block;
+        background-color: #22a244;
+    }
+
+    .toggle i {
+        background-color: #22a244;
+    }
+
+    .menu {
+        position: absolute;
     }
 
     .menu ul {
-        position: fixed;
+        position: absolute;
         width: 100%;
         height: 100vh;
-        background-color: #2afd97;
+        background-color: #0d7529;
         top: 80px;
         left: -100%;
         text-align: center;
@@ -250,10 +294,12 @@
         display: block;
         margin: 50px 0;
         line-height: 30px;
+        background-color: #0d7529;
     }
 
     .menu ul li a {
         font-size: 20px;
+        background-color: #0d7529;
     }
 
     .menu ul li a:hover {
@@ -264,6 +310,6 @@
 
     #check:checked ~ ul {
         left: 0;
-        z-index: 99;
+        z-index: 10;
     }
 }
