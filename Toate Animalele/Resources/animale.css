@@ -3,12 +3,15 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    background-color: #d2e9d8;
-  }
+}
 
 @font-face {
     font-family: manrope-regular;
     src: url(Resources/Fonts/Manrope-Regular.ttf);
+}
+
+body {
+    background-color: #d2e9d8;
 }
 
 /* Meniu */
@@ -49,7 +52,7 @@
 }
 
 .toggle:hover {
-    background-color:  #0e251a;
+    background-color: #0e251a;
     transition: all .5s;
 }
 
@@ -58,14 +61,14 @@
 }
 
 .toggle:hover i {
-    background-color:  #0e251a;
+    background-color: #0e251a;
     transition: .5s;
 }
 
 .logo {
     background-color: #22a244;
     width: 115px;
-    padding: 15px 0px 15px 40px; 
+    padding: 15px 0px 15px 40px;
 }
 
 .menu ul {
@@ -82,9 +85,10 @@
 }
 
 .item a:hover {
-    background-color:  #0e251a;
+    background-color: #0e251a;
     transition: .5s;
 }
+
 /* Meniu stop */
 
 
@@ -104,7 +108,7 @@
     border-right: solid black 1px;
 }
 
-#bara-filtre  h1 {
+#bara-filtre h1 {
     flex-wrap: wrap;
     font-size: 50px;
     color: rgb(24, 24, 24);
@@ -124,23 +128,48 @@
 }
 
 .filtru {
-    display: flex;
     flex-direction: column;
     margin-bottom: 20px;
-    background-color: #ffffff;
-    padding: 5px;
-    border-radius: 5px;
 }
+
+
+
+.filtru>ul {
+    max-height: 0;
+    list-style-type: none;
+    overflow: hidden;
+    transition: max-height 0.15s ease-out;
+    background: #ffffff;
+    border-radius: 0 0 5px 5px;
+    padding: 0 5px;
+}
+
+.filtru.show>ul {
+    max-height: 100%;
+    transition: max-height 0.25s ease-in;
+}
+
+.filtru.show>.nume-filtru>img {
+    transform: scaleY(-1);
+}
+
+.filtru.show>.nume-filtru {
+    border-radius: 5px 5px 0 0;
+}
+
 
 .nume-filtru {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    background-color: #ffffff;
     align-content: center;
+    background-color: #ffffff;
+    padding: 5px;
+    border-radius: 5px;
 }
 
-.nume-filtru p, .nume-filtru img {
+.nume-filtru p,
+.nume-filtru img {
     background-color: #ffffff;
 }
 
@@ -163,7 +192,6 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    overflow: hidden;
     width: 100%;
     line-height: auto;
     margin-top: 20px;
@@ -176,7 +204,8 @@
     margin-right: 20px;
 }
 
-#bara-control section button, #bara-control section.sort-buton-drop {
+#bara-control section button,
+#bara-control section.sort-buton-drop {
     margin-left: auto;
 }
 
@@ -204,7 +233,8 @@
     margin-right: 20px;
 }
 
-#grid-linie, #grid-patrate {
+#grid-linie,
+#grid-patrate {
     width: auto;
     align-content: center;
     margin: 10px;
@@ -215,7 +245,8 @@
     border: none;
 }
 
-#grid-linie img, #grid-patrate img {
+#grid-linie img,
+#grid-patrate img {
     background-color: #ffffff;
 }
 
@@ -237,27 +268,35 @@
     background-color: #c5c2c2;
 }
 
-#buton-sortare:hover, #buton-sortare:hover p, #buton-sortare:hover img {
+#buton-sortare:hover,
+#buton-sortare:hover p,
+#buton-sortare:hover img {
     background-color: #c5c2c2;
 }
 
-#buton-sortare:focus, #buton-sortare:focus p, #buton-sortare:focus img {
+#buton-sortare:focus,
+#buton-sortare:focus p,
+#buton-sortare:focus img {
     background-color: #c5c2c2;
 }
 
-#grid-linie:hover, #grid-linie:hover img {
+#grid-linie:hover,
+#grid-linie:hover img {
     background-color: #c5c2c2;
 }
 
-#grid-linie:focus, #grid-linie:focus img {
+#grid-linie:focus,
+#grid-linie:focus img {
     background-color: #c5c2c2;
 }
 
-#grid-patrate:hover, #grid-patrate:hover img {
+#grid-patrate:hover,
+#grid-patrate:hover img {
     background-color: #c5c2c2;
 }
 
-#grid-patrate:focus, #grid-patrate:focus img {
+#grid-patrate:focus,
+#grid-patrate:focus img {
     background-color: #c5c2c2;
 }
 
@@ -288,7 +327,7 @@
 }
 
 .show {
-    display: block;
+    display: block !important;
 }
 
 
@@ -302,7 +341,6 @@
     align-items: center;
     align-content: space-around;
     justify-content: center;
-    background-color: aqua;
 }
 
 /* definirea unei casete cu un animal in ea */
@@ -312,7 +350,7 @@
     /* flex-direction: row; */
     border: solid black 1px;
     border-radius: 10px;
-    width:25%;
+    width: 25%;
 }
 
 /* numele animalului ce va aparea in caseta */
@@ -383,7 +421,7 @@
         transition: none;
     }
 
-    #check:checked ~ ul {
+    #check:checked~ul {
         left: 0;
         z-index: 10;
     }
