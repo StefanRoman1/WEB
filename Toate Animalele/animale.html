@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="Resources/animale.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+        <script src="animale.js"></script>
         <title>Toate Animalele</title>
     </head>
 
@@ -23,29 +24,64 @@
         </nav>
 
         <main id="pagina-animale">
+            
             <section id="bara-filtre">
-                <h1>Animalele <br> din grădina noastră</h1>
+                <h1>Animalele <br> din grădină</h1>
+
+                <section class="toate-filtrele">
+
+                    <div class="filtru" id="filtru-origine">
+                        <div class="nume-filtru">
+                            <p>Origine</p>
+                            <img src="../images/chevron-up.png" alt="up-arrow-filter-box">
+                        </div>
+                    </div>
+
+                    <div class="filtru" id="filtru-mediu-de-viata">
+                        <div class="nume-filtru">
+                            <p>Mediu de viata</p>
+                            <img src="../images/chevron-up.png" alt="up-arrow-filter-box">
+                        </div>
+                    </div>
+
+                </section>
+
             </section>
 
             <section id="partea-dreapta-pagina">
                 
                 <section id="bara-control">
-                    <div id="buton-sortare">
-                        <p>sortati dupa</p>
-                    </div>
-                    <div id="grid-linie">
-                        <p>poza</p>
-                    </div>
-                    <div id="grid-patrate">
-                        <p>poza</p>
-                    </div>
+                    <button type="button" id="bara-de-cautare">
+                        Căutați animal
+                    </button>
+                    <section>
+                        
+                        <div class="sort-buton-drop">
+                            <button onclick="functieButonSortareAnimale()" id="buton-sortare">
+                                <p> <img src="../images/Vector (Stroke).png" alt="down-arrow-sort-button"> Sortați după</p>
+                            </button>
+                            <div id="optiuni-sortare-buton">
+                                <a href="#">După nume A-Z</a>
+                                <a href="#">După nume Z-A</a>
+                                <a href="#">Alta sortare</a>
+                            </div>
+                        </div>
+                        
+                        <button type="button" id="grid-linie">
+                            <img src="../images/server.png" alt="line-grid-icon">
+                        </button>
+                        <button type="button" id="grid-patrate">
+                            <img src="../images/grid.png" alt="square-grid-icon">
+                        </button>
+
+                    </section>
                 </section>
     
                 <section id="animale-casute">
                     <div class="casuta-animal">
                         <h3 class="nume-animal">Nume Animal</h3>
                     </div>
-    
+                    
                     <div class="casuta-animal">
                         <h3 class="nume-animal">Nume Animal</h3>
                     </div>
@@ -66,7 +102,9 @@
                         <h3 class="nume-animal">Nume Animal</h3>
                     </div>
                 </section>
+
             </section>
+
         </main>
     </body>
 </html>

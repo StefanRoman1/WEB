@@ -11,11 +11,6 @@
     src: url(Resources/Fonts/Manrope-Regular.ttf);
 }
 
-.background {
-    background-color: #ebfff7;
-}
-
-
 /* Meniu */
 .menu {
     background-color: #22a244;
@@ -62,7 +57,7 @@
     background-color: #22a244;
 }
 
-.toggle i:hover {
+.toggle:hover i {
     background-color:  #0e251a;
     transition: .5s;
 }
@@ -90,45 +85,7 @@
     background-color:  #0e251a;
     transition: .5s;
 }
-
-
-
-/* Add a black background color to the top navigation */
-.topnav {
-  position: sticky;
-  top: 0;
-  background-color: #769385;
-  text-align: center;
-  overflow: hidden;
-}
-
-/* Style the links inside the navigation bar */
-.topnav a {
-  display : inline-block;
-  position: relative;
-  color: #f2f2f2;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 20px;
-}
-
-.topnav a.loggo {
-  width: 10;
-  display : inline-block;
-  position: relative;
-  padding: 10px 50px;
-}
-
-/* Change the color of links on hover */
-.topnav a:hover {
-  background-color: #637e71;
-}
-
-/* Add a color to the active/current link */
-.topnav a.active {
-  background-color: #04AA6D;
-  color: white;
-}
+/* Meniu stop */
 
 
 /* ----------------------------- */
@@ -137,23 +94,62 @@
     flex-direction: row;
 }
 
+
+/*  Partea stanga a paginii */
 #bara-filtre {
     display: flex;
     flex-direction: column;
     width: 25%;
     margin-left: 10px;
-    border: solid black 1px;
+    border-right: solid black 1px;
 }
 
-#bara-filtre > h1 {
+#bara-filtre  h1 {
     flex-wrap: wrap;
-    font-size: 40px;
+    font-size: 50px;
     color: rgb(24, 24, 24);
     font-weight: 10px;
+    margin-left: 30px;
+    margin-right: 50px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
+.toate-filtrele {
+    display: flex;
+    flex-direction: column;
+    margin-left: 30px;
+    margin-right: 50px;
+    margin-top: 20px;
+}
+
+.filtru {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    background-color: #ffffff;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.nume-filtru {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #ffffff;
+    align-content: center;
+}
+
+.nume-filtru p, .nume-filtru img {
+    background-color: #ffffff;
+}
+
+/* .nume-filtru p {
+    margin-right: 30px;
+} */
 
 
+/* Partea dreapta a paginii */
 #partea-dreapta-pagina {
     display: flex;
     flex-direction: column;
@@ -161,20 +157,27 @@
     margin-right: 10px;
 }
 
+
 /* Bara de sus din partea dreapta*/
 #bara-control {
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
+    justify-content: space-between;
     overflow: hidden;
     width: 100%;
     line-height: auto;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
-#bara-control div {
-    margin-left: 5px;
+#bara-control section {
+    display: flex;
+    flex-direction: row;
+    margin-right: 20px;
+}
+
+#bara-control section button, #bara-control section.sort-buton-drop {
+    margin-left: auto;
 }
 
 /* Butonul care selecteaza dupa ce fac sortarea elementelor din pagina */
@@ -182,38 +185,110 @@
     width: auto;
     margin: 10px;
     align-content: center;
-    /* line-height: 30px; */
+    background-color: #ffffff;
+    padding: 14 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+}
+
+#buton-sortare img {
+    background-color: #ffffff;
+    margin-right: 30px;
+    margin-left: 20px;
 }
 
 #buton-sortare p {
+    font-size: 14px;
     background-color: #ffffff;
-    padding: 10 5px;
-    border-radius: 5px;
+    margin-right: 20px;
 }
 
 #grid-linie, #grid-patrate {
     width: auto;
     align-content: center;
     margin: 10px;
-}
-
-#grid-linie p, #grid-patrate p{
     background-color: #ffffff;
-    padding: 10 5px;
+    padding: 10 10px;
     border-radius: 5px;
+    cursor: pointer;
+    border: none;
+}
+
+#grid-linie img, #grid-patrate img {
+    background-color: #ffffff;
+}
+
+#bara-de-cautare {
+    width: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 30px;
+    align-content: center;
+    cursor: pointer;
+    border: none;
+    background-color: #ffffff;
+    padding: 10px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+#bara-de-cautare:hover {
+    background-color: #c5c2c2;
+}
+
+#buton-sortare:hover, #buton-sortare:hover p, #buton-sortare:hover img {
+    background-color: #c5c2c2;
+}
+
+#buton-sortare:focus, #buton-sortare:focus p, #buton-sortare:focus img {
+    background-color: #c5c2c2;
+}
+
+#grid-linie:hover, #grid-linie:hover img {
+    background-color: #c5c2c2;
+}
+
+#grid-linie:focus, #grid-linie:focus img {
+    background-color: #c5c2c2;
+}
+
+#grid-patrate:hover, #grid-patrate:hover img {
+    background-color: #c5c2c2;
+}
+
+#grid-patrate:focus, #grid-patrate:focus img {
+    background-color: #c5c2c2;
 }
 
 
-
-/* Crearea celor 2 butoane */
-.butoane-afisare-grid > div {
+.sort-buton-drop {
     position: relative;
-    width: auto;
-    margin: 10px;
-    align-content: center;
-    line-height: 30px;
-    background-color: rgb(133, 133, 133);
-    border-radius: 5px;
+    display: inline-block;
+}
+
+#optiuni-sortare-buton {
+    display: none;
+    position: absolute;
+    overflow: auto;
+    z-index: 20;
+    background-color: #ffffff;
+    min-width: 160px;
+}
+
+#optiuni-sortare-buton a {
+    color: black;
+    text-decoration: none;
+    display: block;
+    padding: 12px 16px;
+}
+
+#optiuni-sortare-buton a:hover {
+    background-color: #c5c2c2;
+}
+
+.show {
+    display: block;
 }
 
 
@@ -264,7 +339,7 @@
     }
 }
 
-/* media query pentru navbar */
+/* Media query pentru navbar */
 @media only screen and (max-width:850px) {
     .toggle {
         display: block;
