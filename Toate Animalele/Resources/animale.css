@@ -76,7 +76,6 @@
 }
 
 
-
 /* Add a black background color to the top navigation */
 .topnav {
   position: sticky;
@@ -228,7 +227,10 @@
         margin-right: 10px;
         border: solid black 1px;
     }
+}
 
+/* media query pentru navbar */
+@media only screen and (max-width:850px) {
     .toggle {
         display: block;
     }
