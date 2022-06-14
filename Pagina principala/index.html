@@ -2,17 +2,22 @@
 <html>
     <head>
         <link href="./resurse/resurse.css" type="text/css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
         <title>Gradina zoologica FIMURO</title>
     </head>
     <body class = "background">
-        <div class="topnav">
-            <a href="#loggo" class="loggo"><img src = "poza.png" width = 30px;></a>
-            <a href="#animale">Toate animalele</a>
-            <a href="#program">Program</a>
-            <a href="#harta">Harta</a>
-            <a href="#rezervari">Rezerva un loc!</a>
-            <a href="#echipa">Staff</a>
-        </div> 
+        <nav class="menu">
+            <input type="checkbox" id="check">
+            <label for="check" class="toggle"><i class="fas fa-bars"></i></label>
+            <img class="logo" src="resurse/tigru.jpg">
+            <ul>
+                <li class = "item"><a href="#animale">Toate animalele</a></li>
+                <li class = "item"><a href="#program">Program</a></li>
+                <li class = "item"><a href="#harta">Harta</a></li>
+                <li class = "item"><a href="#rezervari">Rezerva un loc</a></li>
+                <li class = "item"><a href="#echipa">Staff</a></li>
+            </ul>
+        </nav>
         <header id='intro'></header>
         <h1 class = "title">
              Descriere
