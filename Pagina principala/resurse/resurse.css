@@ -87,7 +87,7 @@
 
   #intro {
     background-image:linear-gradient(to bottom,rgba(99, 49, 226, 0) 0%,
-    #ebfff7 100%), url('tigru.jpg');
+    #ebfff7 100%), url('../Pictures/tigru.jpg');
     background-size: cover;
     background-position: center;
     height: 100vh;
