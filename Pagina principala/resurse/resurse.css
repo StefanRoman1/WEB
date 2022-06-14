@@ -3,7 +3,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /*background-color: #d80c0c;*/
   }
 
 .background {
@@ -12,9 +11,10 @@
 
   /* Add a black background color to the top navigation */
   .menu {
+    position: sticky;
     background-color: #22a244;
     list-style-type: none;
-    position: sticky;
+    
     font-size: 17px;
     width: 100%;
     height: 80px;
