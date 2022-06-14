@@ -4,48 +4,160 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="Resources/animale.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+        <script src="animale.js"></script>
         <title>Toate Animalele</title>
     </head>
 
     <body>
-        <!-- <div class="topnav">
-            <a href="#loggo" class="loggo"><img src = "tigru.jpg" width = 30px;></a>
-            <a href="#animale">Toate animalele</a>
-            <a href="#program">Program</a>
-            <a href="#harta">Harta</a>
-            <a href="#rezervari">Rezerva un loc!</a>
-            <a href="#echipa">Staff</a>
-        </div>  -->
-        
-        <!-- incercare de nav bar responsive pt site, dar mai am putin de lucru la el -->
         <nav class="menu">
-            <img src="tigru.jpg">
+            <input type="checkbox" id="check">
+            <label for="check" class="toggle"><i class="fas fa-bars"></i></label>
+            <img class="logo" src="tigru.jpg">
             <ul>
-                <li><a href="#animale">Toate animalele</a></li>
-                <li><a href="#program">Program</a></li>
-                <li><a href="#harta">Harta</a></li>
-                <li><a href="#rezervari">Rezerva un loc</a></li>
-                <li><a href="#echipa">Staff</a></li>
+                <li class = "item"><a href="#animale">Toate animalele</a></li>
+                <li class = "item"><a href="#program">Program</a></li>
+                <li class = "item"><a href="#harta">Harta</a></li>
+                <li class = "item"><a href="#rezervari">Rezerva un loc</a></li>
+                <li class = "item"><a href="#echipa">Staff</a></li>
             </ul>
         </nav>
 
         <main id="pagina-animale">
+            
             <section id="bara-filtre">
-                <h1>Animalele <br> din grădina noastră</h1>
+                <h1>Animalele <br> din grădină</h1>
+    
+                <section class="toate-filtrele">
+    
+                    <div class="filtru" id="filtru-origine">
+                        <div class="nume-filtru" onclick="filtruClickEvent(this)">
+                            <p>Origine</p>
+                            <img src="../images/chevron-up.png" alt="up-arrow-filter-box">
+                        </div>
+    
+                        <ul>
+                            <!-- intr-un submit acel checkbox va avea opname=opval daca e setat, sau absolut nimic, daca nu -->
+                            <li> <input type="checkbox" name="opname" value="opval"> lorem ipsum</li>
+                            <li> <input type="checkbox" name="opname" value="opval"> lorem ipsum</li>
+                            <li> <input type="checkbox" name="opname" value="opval"> lorem ipsum</li>
+                            <li> <input type="checkbox" name="opname" value="opval"> lorem ipsum</li>
+                            <li> <input type="checkbox" name="opname" value="opval"> lorem ipsum</li>
+                        </ul>
+    
+                    </div>
+    
+                    <div class="filtru" id="filtru-mediu-de-viata">
+                        <div class="nume-filtru" onclick="filtruClickEvent(this)">
+                            <p>Mediu de viață</p>
+                            <img src="../images/chevron-up.png" alt="up-arrow-filter-box">
+                        </div>
+    
+                        <ul>
+                            <!-- intr-un submit acel checkbox va avea opname=opval daca e setat, sau absolut nimic, daca nu -->
+                            <li> <input type="checkbox" name="opname" value="opval"> lorem ipsum</li>
+                            <li> <input type="checkbox" name="opname" value="opval"> lorem ipsum</li>
+                            <li> <input type="checkbox" name="opname" value="opval"> lorem ipsum</li>
+                            <li> <input type="checkbox" name="opname" value="opval"> lorem ipsum</li>
+                            <li> <input type="checkbox" name="opname" value="opval"> lorem ipsum</li>
+                        </ul>
+                    </div>
+
+                    <div class="filtru" id="filtru-hrana">
+                        <div class="nume-filtru" onclick="filtruClickEvent(this)">
+                            <p>Hrană</p>
+                            <img src="../images/chevron-up.png" alt="up-arrow-filter-box">
+                        </div>
+    
+                        <ul>
+                            <!-- intr-un submit acel checkbox va avea opname=opval daca e setat, sau absolut nimic, daca nu -->
+                            <li> <input type="checkbox" name="opname" value="opval"> lorem ipsum</li>
+                            <li> <input type="checkbox" name="opname" value="opval"> lorem ipsum</li>
+                            <li> <input type="checkbox" name="opname" value="opval"> lorem ipsum</li>
+                            <li> <input type="checkbox" name="opname" value="opval"> lorem ipsum</li>
+                            <li> <input type="checkbox" name="opname" value="opval"> lorem ipsum</li>
+                        </ul>
+                    </div>
+
+                    <div class="filtru" id="filtru-tip-de-specie">
+                        <div class="nume-filtru" onclick="filtruClickEvent(this)">
+                            <p>Tip de specie</p>
+                            <img src="../images/chevron-up.png" alt="up-arrow-filter-box">
+                        </div>
+    
+                        <ul>
+                            <!-- intr-un submit acel checkbox va avea opname=opval daca e setat, sau absolut nimic, daca nu -->
+                            <li> <input type="checkbox" name="opname" value="opval"> lorem ipsum</li>
+                            <li> <input type="checkbox" name="opname" value="opval"> lorem ipsum</li>
+                            <li> <input type="checkbox" name="opname" value="opval"> lorem ipsum</li>
+                            <li> <input type="checkbox" name="opname" value="opval"> lorem ipsum</li>
+                            <li> <input type="checkbox" name="opname" value="opval"> lorem ipsum</li>
+                        </ul>
+                    </div>
+
+                    <div class="filtru" id="filtru-domesticire">
+                        <div class="nume-filtru" onclick="filtruClickEvent(this)">
+                            <p>Domesticire</p>
+                            <img src="../images/chevron-up.png" alt="up-arrow-filter-box">
+                        </div>
+    
+                        <ul>
+                            <!-- intr-un submit acel checkbox va avea opname=opval daca e setat, sau absolut nimic, daca nu -->
+                            <li> <input type="checkbox" name="opname" value="opval"> lorem ipsum</li>
+                            <li> <input type="checkbox" name="opname" value="opval"> lorem ipsum</li>
+                            <li> <input type="checkbox" name="opname" value="opval"> lorem ipsum</li>
+                            <li> <input type="checkbox" name="opname" value="opval"> lorem ipsum</li>
+                            <li> <input type="checkbox" name="opname" value="opval"> lorem ipsum</li>
+                        </ul>
+                    </div>
+
+                    <div class="filtru" id="filtru-hrana">
+                        <div class="nume-filtru" onclick="filtruClickEvent(this)">
+                            <p>Locație</p>
+                            <img src="../images/chevron-up.png" alt="up-arrow-filter-box">
+                        </div>
+    
+                        <ul>
+                            <!-- intr-un submit acel checkbox va avea opname=opval daca e setat, sau absolut nimic, daca nu -->
+                            <li> <input type="checkbox" name="opname" value="opval"> lorem ipsum</li>
+                            <li> <input type="checkbox" name="opname" value="opval"> lorem ipsum</li>
+                            <li> <input type="checkbox" name="opname" value="opval"> lorem ipsum</li>
+                            <li> <input type="checkbox" name="opname" value="opval"> lorem ipsum</li>
+                            <li> <input type="checkbox" name="opname" value="opval"> lorem ipsum</li>
+                        </ul>
+                    </div>
+    
+                </section>
+    
             </section>
 
+            
             <section id="partea-dreapta-pagina">
+                
                 <section id="bara-control">
-                    <div id="buton-sortare">
-                        <p>sortati dupa</p>
-                    </div>
-                    <section class="butoane-afisare-grid">
-                        <div id="grid-linie">
-                            <p>poza</p>
+                    <button type="button" id="bara-de-cautare">
+                        Căutați animal
+                    </button>
+                    <section>
+                        
+                        <div class="sort-buton-drop">
+                            <button onclick="functieButonSortareAnimale()" id="buton-sortare">
+                                <p> <img src="../images/Vector (Stroke).png" alt="down-arrow-sort-button"> Sortați după</p>
+                            </button>
+                            <div onclick="restrangereOptiuniSortare()" id="optiuni-sortare-buton">
+                                <a href="#">După nume A-Z</a>
+                                <a href="#">După nume Z-A</a>
+                                <a href="#">Alta sortare</a>
+                            </div>
                         </div>
-                        <div id="grid-patrate">
-                            <p>poza</p>
-                        </div>
+                        
+                        <button type="button" id="grid-linie" class="buton-grid" onclick="gridClickEvent(this)">
+                            <img src="../images/server.png" alt="line-grid-icon">
+                        </button>
+                        <button type="button" id="grid-patrate" class="buton-grid show" onclick="gridClickEvent(this)">
+                            <img src="../images/grid.png" alt="square-grid-icon">
+                        </button>
+
                     </section>
                 </section>
     
@@ -53,7 +165,7 @@
                     <div class="casuta-animal">
                         <h3 class="nume-animal">Nume Animal</h3>
                     </div>
-    
+                    
                     <div class="casuta-animal">
                         <h3 class="nume-animal">Nume Animal</h3>
                     </div>
@@ -74,7 +186,9 @@
                         <h3 class="nume-animal">Nume Animal</h3>
                     </div>
                 </section>
+
             </section>
+
         </main>
     </body>
 </html>
