@@ -146,6 +146,7 @@
                 <section>
                     <h4>3.1.1 Componentele interfeței</h4>
                     <p>
+<<<<<<< Updated upstream
                         Interacțiunea cu utilizatorul se va face prin intermediul paginilor care compun site-ul. Pentru a îndeplini 
                         cerințele necesare unei grădini zoologice, am decis ca paginile web implementate să fie următoarele: pagina 
                         principală, pagina catalogului cu animale, pagina specifică fiecărui animal, pagina de conectare sau creare 
@@ -153,6 +154,15 @@
                     </p>
                     <p>
                         Interacțiunile dintre pagini vor fi descrise în secțiunea <a href="#caracteristicile_sistemului">4</a>.
+=======
+                        Interacțiunea cu utilizatorul se va face prin intermediul paginilor care compun site-ul. Pentru a indeplini 
+                        cerințele necesare unei grădini zoologice, am decis ca paginile web implementate să fie urmatoarele: pagina 
+                        principala, pagina catalogului cu animale, pagina specifică fiecărui animal, pagina de conectare sau creare 
+                        a contului, pagina de rezervare a biletelor și pagina dedicată administratorilor grădinii zoologice.
+                    </p>
+                    <p>
+                        Interacțiunile dintre pagini vor fi descrise in secțiunea 4.
+>>>>>>> Stashed changes
                     </p>
                 </section>
                 <section>
@@ -181,10 +191,10 @@
             <section>
                 <h3>3.2 Interfețe hardware</h3>
                 <p>
-                    Componentele hardware implicate in functionarea produsului sunt serverul web si discpozitivul de pe care se 
-                    acceseaza site-ul. Serverul web va contine baza de date pe care sunt stocate informatiile disponibile pe site. 
-                    Acesta va furniza informatiile disponibile, cerute de utilizator prin intermediul site-ului, care mai apoi vor 
-                    fi afisate in formatul unor pagini web. Comunicarea cu site-ul se va face utilizand protocolul HTTP. La nivel 
+                    Componentele hardware implicate în funcționarea produsului sunt serverul web și dispozitivul de pe care se 
+                    acceseaza site-ul. Serverul web va contine baza de date pe care sunt stocate informațiile disponibile pe site. 
+                    Acesta va furniza informațiile disponibile, cerute de utilizator prin intermediul site-ului, care mai apoi vor 
+                    fi afișate în formatul unor pagini web. Comunicarea cu site-ul se va face utilizând protocolul HTTP. La nivel 
                     de dispozitive care pot fi utilizate, orice dispozitiv cu acces la un browser web va putea accesa site-ul.
                 </p>
             </section>
@@ -193,25 +203,43 @@
                 <section>
                     <h4>3.3.1 Motor de căutare</h4>
                     <p>
+<<<<<<< Updated upstream
                         La nivel de tehnologii software, produsul este conceput pentru cele mai utilizate motoare de căutare 
                         precum Chrome, Opera, Mozilla sau Edge și va utiliza serviciile acestora pentru a accesa site-ul și pentru 
                         a comunica cu serverul utilizând protocolul HTTP.  
+=======
+                        La nivel de tehnologii software, produsul este conceput pentru cele mai utilizate motoare de cautare 
+                        precum Chrome, Opera, Mozilla sau Edge și va utiliza serviciile acestora pentru a accesa site-ul și pentru 
+                        a comunica cu serverul utilizand protocolul HTTP.  
+>>>>>>> Stashed changes
                     </p>
                 </section>
                 <section>
                     <h4>3.3.2 Server</h4>
                     <p>
+<<<<<<< Updated upstream
                         Implementarea serverului este făcută utilizând PHP ca limbaj de programare, fiind o implementare proprie 
                         a echipei. Acesta are ca rol accesarea bazei de date pentru a completa paginile web accesate cu informațiile 
                         necesare. Paginile web vor fi disponibile în formatul unor șabloane. Câmpurile specifice fiecărui șablon 
                         sunt completate cu datele primite de server și apoi încărcate în browser pentru a fi vizualizate de utilizator.
+=======
+                        Implementarea serverului este făcuta utilizand PHP ca limbaj de programare, fiind o implementare proprie 
+                        a echipei. Acesta are ca rol accesarea bazei de date pentru a completa paginile web accesate cu informațiile 
+                        necesare. Paginile web for fi disponibile in formatul unor șabloane. Câmpurile specifice fiecărui șablon 
+                        sunt completate cu datele primite de server și apoi încarcate in browser pentru a fi vizualizate de utilizator.
+>>>>>>> Stashed changes
                     </p>
                 </section>
                 <section>
                     <h4>3.3.3 Bază de date</h4>
                     <p>
+<<<<<<< Updated upstream
                         Baza de date utilizata este Oracle Database. Aceasta va conține un tabel cu informțiile disponibile, 
                         precum și etichetele care pot fi aplicate în momentul filtrării, specifice fiecărui animal. Pe lângă acest 
+=======
+                        Baza de date utilizată este Oracle Database. Aceasta va conține un tabel cu informațiile disponibile, 
+                        precum și etichetele care pot fi aplicate în momentul filtrării, specifice fiecărui animal. Pe lânga acest 
+>>>>>>> Stashed changes
                         tabel, mai sunt prezente tabelul cu informații despre ghizii disponibili pentru tururile de prezentare 
                         pentru care se vor putea închiria bilete; și tabelul cu informații criptate legate de datele de conectare 
                         ale utilizatorilor.
@@ -221,16 +249,28 @@
             <section>
                 <h3>3.4 Interfețe de comunicare</h3>
                 <p>
+<<<<<<< Updated upstream
                     La baza comunicării între site și server se află protocolul HTTP. Motorul de căutare trimite apeluri de tip 
+=======
+                    La baza comunicării intre site și server se afla protocolul HTTP. Motorul de căutare trimite apeluri de tip 
+>>>>>>> Stashed changes
                     “HTTP Request” către server, și primește semnale “HTTP Response” de la acesta.
                 </p>
                 <p>
                     Cererile clientului pot fi cereri de informații din baza de date (ex: informațiile despre un anumit animal), 
+<<<<<<< Updated upstream
                     sau cereri pentru a scrie informații în baza de date (ex: înregistrarea unor noi utilizatori în baza de date).
                 </p>
                 <p>
                     Răspunsul serverlui constă într-un set de date citite din baza de date și trimise la pagina care a făcut cererea, 
                     pentru a fi afișate. Aceste seturi de date sunt de tip șiruri de caractere și contin informații despre animale, 
+=======
+                    sau cereri pentru a scrie informații in baza de date (ex: inregistrarea unor noi utilizatori în baza de date).
+                </p>
+                <p>
+                    Răspunsul serverlui constă într-un set de date citite din baza de date și trimise la pagina care a facut cererea, 
+                    pentru a fi afișate. Aceste seturi de date sunt de tip șiruri de caractere și conțin informații despre animale, 
+>>>>>>> Stashed changes
                     informații despre grădina zoologică sau adresele pozelor afișate pe paginile web.
                 </p>
             </section>
