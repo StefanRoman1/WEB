@@ -49,7 +49,71 @@
     
                     <div class="filtru" id="filtru-mediu-de-viata">
                         <div class="nume-filtru" onclick="filtruClickEvent(this)">
-                            <p>Mediu de viata</p>
+                            <p>Mediu de viață</p>
+                            <img src="../images/chevron-up.png" alt="up-arrow-filter-box">
+                        </div>
+    
+                        <ul>
+                            <!-- intr-un submit acel checkbox va avea opname=opval daca e setat, sau absolut nimic, daca nu -->
+                            <li> <input type="checkbox" name="opname" value="opval"> lorem ipsum</li>
+                            <li> <input type="checkbox" name="opname" value="opval"> lorem ipsum</li>
+                            <li> <input type="checkbox" name="opname" value="opval"> lorem ipsum</li>
+                            <li> <input type="checkbox" name="opname" value="opval"> lorem ipsum</li>
+                            <li> <input type="checkbox" name="opname" value="opval"> lorem ipsum</li>
+                        </ul>
+                    </div>
+
+                    <div class="filtru" id="filtru-hrana">
+                        <div class="nume-filtru" onclick="filtruClickEvent(this)">
+                            <p>Hrană</p>
+                            <img src="../images/chevron-up.png" alt="up-arrow-filter-box">
+                        </div>
+    
+                        <ul>
+                            <!-- intr-un submit acel checkbox va avea opname=opval daca e setat, sau absolut nimic, daca nu -->
+                            <li> <input type="checkbox" name="opname" value="opval"> lorem ipsum</li>
+                            <li> <input type="checkbox" name="opname" value="opval"> lorem ipsum</li>
+                            <li> <input type="checkbox" name="opname" value="opval"> lorem ipsum</li>
+                            <li> <input type="checkbox" name="opname" value="opval"> lorem ipsum</li>
+                            <li> <input type="checkbox" name="opname" value="opval"> lorem ipsum</li>
+                        </ul>
+                    </div>
+
+                    <div class="filtru" id="filtru-tip-de-specie">
+                        <div class="nume-filtru" onclick="filtruClickEvent(this)">
+                            <p>Tip de specie</p>
+                            <img src="../images/chevron-up.png" alt="up-arrow-filter-box">
+                        </div>
+    
+                        <ul>
+                            <!-- intr-un submit acel checkbox va avea opname=opval daca e setat, sau absolut nimic, daca nu -->
+                            <li> <input type="checkbox" name="opname" value="opval"> lorem ipsum</li>
+                            <li> <input type="checkbox" name="opname" value="opval"> lorem ipsum</li>
+                            <li> <input type="checkbox" name="opname" value="opval"> lorem ipsum</li>
+                            <li> <input type="checkbox" name="opname" value="opval"> lorem ipsum</li>
+                            <li> <input type="checkbox" name="opname" value="opval"> lorem ipsum</li>
+                        </ul>
+                    </div>
+
+                    <div class="filtru" id="filtru-domesticire">
+                        <div class="nume-filtru" onclick="filtruClickEvent(this)">
+                            <p>Domesticire</p>
+                            <img src="../images/chevron-up.png" alt="up-arrow-filter-box">
+                        </div>
+    
+                        <ul>
+                            <!-- intr-un submit acel checkbox va avea opname=opval daca e setat, sau absolut nimic, daca nu -->
+                            <li> <input type="checkbox" name="opname" value="opval"> lorem ipsum</li>
+                            <li> <input type="checkbox" name="opname" value="opval"> lorem ipsum</li>
+                            <li> <input type="checkbox" name="opname" value="opval"> lorem ipsum</li>
+                            <li> <input type="checkbox" name="opname" value="opval"> lorem ipsum</li>
+                            <li> <input type="checkbox" name="opname" value="opval"> lorem ipsum</li>
+                        </ul>
+                    </div>
+
+                    <div class="filtru" id="filtru-hrana">
+                        <div class="nume-filtru" onclick="filtruClickEvent(this)">
+                            <p>Locație</p>
                             <img src="../images/chevron-up.png" alt="up-arrow-filter-box">
                         </div>
     
@@ -80,17 +144,17 @@
                             <button onclick="functieButonSortareAnimale()" id="buton-sortare">
                                 <p> <img src="../images/Vector (Stroke).png" alt="down-arrow-sort-button"> Sortați după</p>
                             </button>
-                            <div id="optiuni-sortare-buton">
+                            <div onclick="restrangereOptiuniSortare()" id="optiuni-sortare-buton">
                                 <a href="#">După nume A-Z</a>
                                 <a href="#">După nume Z-A</a>
                                 <a href="#">Alta sortare</a>
                             </div>
                         </div>
                         
-                        <button type="button" id="grid-linie">
+                        <button type="button" id="grid-linie" class="buton-grid" onclick="gridClickEvent(this)">
                             <img src="../images/server.png" alt="line-grid-icon">
                         </button>
-                        <button type="button" id="grid-patrate">
+                        <button type="button" id="grid-patrate" class="buton-grid show" onclick="gridClickEvent(this)">
                             <img src="../images/grid.png" alt="square-grid-icon">
                         </button>
 

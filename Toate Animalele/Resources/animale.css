@@ -68,7 +68,7 @@ body {
 .logo {
     background-color: #22a244;
     width: 115px;
-    padding: 15px 0px 15px 40px;
+    padding: 15px 0px 13px 40px;
 }
 
 .menu ul {
@@ -89,8 +89,6 @@ body {
     transition: .5s;
 }
 
-/* Meniu stop */
-
 
 /* ----------------------------- */
 #pagina-animale {
@@ -104,6 +102,7 @@ body {
     display: flex;
     flex-direction: column;
     width: 25%;
+    height: 100vh;
     margin-left: 10px;
     border-right: solid black 1px;
 }
@@ -133,6 +132,9 @@ body {
 }
 
 
+.buton-grid.show {
+    background-color: #c5c2c2 !important;
+}
 
 .filtru>ul {
     max-height: 0;
@@ -157,7 +159,6 @@ body {
     border-radius: 5px 5px 0 0;
 }
 
-
 .nume-filtru {
     display: flex;
     flex-direction: row;
@@ -168,14 +169,6 @@ body {
     border-radius: 5px;
 }
 
-.nume-filtru p,
-.nume-filtru img {
-    background-color: #ffffff;
-}
-
-/* .nume-filtru p {
-    margin-right: 30px;
-} */
 
 
 /* Partea dreapta a paginii */
@@ -222,14 +215,12 @@ body {
 }
 
 #buton-sortare img {
-    background-color: #ffffff;
     margin-right: 30px;
     margin-left: 20px;
 }
 
 #buton-sortare p {
     font-size: 14px;
-    background-color: #ffffff;
     margin-right: 20px;
 }
 
@@ -243,11 +234,6 @@ body {
     border-radius: 5px;
     cursor: pointer;
     border: none;
-}
-
-#grid-linie img,
-#grid-patrate img {
-    background-color: #ffffff;
 }
 
 #bara-de-cautare {
@@ -268,35 +254,15 @@ body {
     background-color: #c5c2c2;
 }
 
-#buton-sortare:hover,
-#buton-sortare:hover p,
-#buton-sortare:hover img {
+#buton-sortare:hover {
     background-color: #c5c2c2;
 }
 
-#buton-sortare:focus,
-#buton-sortare:focus p,
-#buton-sortare:focus img {
+#grid-linie:hover {
     background-color: #c5c2c2;
 }
 
-#grid-linie:hover,
-#grid-linie:hover img {
-    background-color: #c5c2c2;
-}
-
-#grid-linie:focus,
-#grid-linie:focus img {
-    background-color: #c5c2c2;
-}
-
-#grid-patrate:hover,
-#grid-patrate:hover img {
-    background-color: #c5c2c2;
-}
-
-#grid-patrate:focus,
-#grid-patrate:focus img {
+#grid-patrate:hover {
     background-color: #c5c2c2;
 }
 
@@ -336,7 +302,6 @@ body {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
-    margin-right: 10px;
     overflow: hidden;
     align-items: center;
     align-content: space-around;
@@ -355,10 +320,15 @@ body {
 
 /* numele animalului ce va aparea in caseta */
 .nume-animal {
-    /* position: absolute; */
-    align-content: center;
+    text-align: center;
 }
 
+
+@media only screen and (max-width:1100px) {
+    #bara-filtre h1 {
+        font-size: 30px;
+    }
+}
 
 /* editarea continutului paginii in functie de dimensiunea dispozitivului */
 @media only screen and (max-width:850px) {
@@ -367,15 +337,62 @@ body {
         flex-direction: column;
     }
 
+    #partea-dreapta-pagina {
+        width: 100%;
+    }
+
+    .casuta-animal {
+        width: 35%;
+    }
+
+    #bara-control {
+        flex-direction: column;
+    }
+
+    #bara-control section {
+        margin-left: 20px;
+        margin-right: 5px;
+        justify-content:flex-end;
+        /* justify-content: space-between; */
+    }
+
+    #bara-control button {
+        margin-right: 10px;
+        margin-left: 20px;
+    }
+
+    #bara-control section.buton-grid {
+        display: flex;
+        flex-direction: row;
+    }
+
+
     #bara-filtre {
         display: flex;
         flex-direction: column;
         width: 100%;
         margin-left: 10px;
         margin-right: 10px;
-        border: solid black 1px;
+        border: none;
+        height: auto;
+    }
+
+    #bara-filtre h1 {
+        margin-top: 100px;
+        font-size: 50px;
+    }
+
+    .toate-filtrele {
+        display: none;
     }
 }
+
+
+/* Media query pentru filtre pe mobile */
+@media only screen and (max-width:850px) {
+    
+}
+
 
 /* Media query pentru navbar */
 @media only screen and (max-width:850px) {
@@ -423,6 +440,6 @@ body {
 
     #check:checked~ul {
         left: 0;
-        z-index: 10;
+        z-index: 20;
     }
 }
