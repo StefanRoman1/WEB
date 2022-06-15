@@ -288,6 +288,7 @@ body {
     text-decoration: none;
     display: block;
     padding: 12px 16px;
+    cursor: pointer;
 }
 
 #optiuni-sortare-buton a:hover {
@@ -298,62 +299,52 @@ body {
     display: block !important;
 }
 
-.show-grid {
-    display: flex !important;
+#animale-casute.show-grid {
+    grid-template-columns: 1fr !important;
 }
 
-#animale-casute.show-grid > .casuta-animal {
-    margin: 30px;
+#animale-casute.show-grid>.casuta-animal {
     position: relative;
-    background-color: #ffffff;
-    width: 35%;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
 }
 
-#animale-casute.show-grid > .casuta-animal.poza-animal {
-    width: 100%;
-    border-radius: 10px 10px 10px 10px;
+#animale-casute.show-grid>.casuta-animal>.casuta-imagine {
+    width: 200px;
 }
 
-#animale-casute.show-grid > .casuta-animal.detalii-animal-casuta {
+#animale-casute.show-grid>.casuta-animal.detalii-animal-casuta {
     display: block;
-    /* flex-direction: column;
-    flex-wrap: wrap; */
     margin-top: auto;
     margin-bottom: auto;
 }
 
 /* Partea unde voi avea casetele cu fiecare animal in parte afisat in functie de filtre */
 #animale-casute {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-gap: 30px;
+    padding: 30px;
+    justify-content: space-between;
+    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
     width: 100%;
-    overflow: hidden;
-    align-items: center;
-    align-content: space-around;
-    justify-content: center;
 }
 
 /* definirea unei casete cu un animal in ea */
 .casuta-animal {
-    margin: 30px;
     position: relative;
     background-color: #ffffff;
     border-radius: 10px;
-    width: 25%;
     cursor: pointer;
+    overflow: hidden;
 }
 
 .casuta-animal:hover {
-    box-shadow: 0px 0px 15px 1px #0e251a;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     transition: .3s;
 }
 
-.poza-animal {
-    width: 100%;
-    border-radius: 10px 10px 0 0;
+.casuta-animal:hover .imagine {
+    transform: scale(1.2);
 }
 
 /* numele animalului ce va aparea in caseta */
@@ -372,6 +363,22 @@ body {
     font-size: 14px;
 }
 
+.casuta-imagine {
+    inset: 0;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.casuta-imagine>.imagine {
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: transform 0.2s ease-in-out;
+    transition: transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
+}
 
 
 @media only screen and (max-width:1100px) {
@@ -382,9 +389,9 @@ body {
 
 
 @media only screen and (max-width:1000px) {
-    .casuta-animal {
+    /* .casuta-animal {
         margin: 15px;
-    }
+    } */
 }
 
 /* editarea continutului paginii in functie de dimensiunea dispozitivului */
@@ -399,9 +406,10 @@ body {
         border: none;
     }
 
-    .casuta-animal {
+
+    /* .casuta-animal {
         width: 35%;
-    }
+    } */
 
     #bara-control {
         flex-direction: column;
@@ -410,8 +418,13 @@ body {
     #bara-control section {
         margin-left: 20px;
         margin-right: 5px;
-        justify-content:flex-end;
+        justify-content: flex-end;
         /* justify-content: space-between; */
+    }
+
+    #animale-casute {
+        padding-left: 20px;
+        padding-right: 15px;
     }
 
     #bara-control button {
@@ -446,9 +459,7 @@ body {
 
 
 /* Media query pentru filtre pe mobile */
-@media only screen and (max-width:850px) {
-    
-}
+@media only screen and (max-width:850px) {}
 
 
 /* Media query pentru navbar */

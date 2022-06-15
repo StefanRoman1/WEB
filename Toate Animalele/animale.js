@@ -46,9 +46,9 @@ function sortAnimalsAZ() {
         b = list.getElementsByClassName("casuta-animal");
         for(i = 0; i < (b.length - 1); i++) {
             shouldSwitch = false;
-            detaliiAnimal1 = b[i].getElementsByTagName("div");
+            detaliiAnimal1 = b[i].getElementsByClassName("detalii-animal-casuta");
             numeAnimal1 = detaliiAnimal1[0].getElementsByClassName("nume-animal");
-            detaliiAnimal2 = b[i+1].getElementsByTagName("div");
+            detaliiAnimal2 = b[i+1].getElementsByClassName("detalii-animal-casuta");
             numeAnimal2 = detaliiAnimal2[0].getElementsByClassName("nume-animal");
             if(numeAnimal1[0].innerHTML.toLocaleLowerCase() > numeAnimal2[0].innerHTML.toLocaleLowerCase()){
                 shouldSwitch = true;
@@ -73,9 +73,9 @@ function sortAnimalsZA() {
         b = list.getElementsByClassName("casuta-animal");
         for(i = 0; i < (b.length - 1); i++) {
             shouldSwitch = false;
-            detaliiAnimal1 = b[i].getElementsByTagName("div");
+            detaliiAnimal1 = b[i].getElementsByClassName("detalii-animal-casuta");
             numeAnimal1 = detaliiAnimal1[0].getElementsByClassName("nume-animal");
-            detaliiAnimal2 = b[i+1].getElementsByTagName("div");
+            detaliiAnimal2 = b[i+1].getElementsByClassName("detalii-animal-casuta");
             numeAnimal2 = detaliiAnimal2[0].getElementsByClassName("nume-animal");
             if(numeAnimal1[0].innerHTML.toLocaleLowerCase() < numeAnimal2[0].innerHTML.toLocaleLowerCase()){
                 shouldSwitch = true;
