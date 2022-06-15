@@ -34,6 +34,7 @@ function gridChangedEvent() {
     let gridCurent = lastGrid; // poate fi "grid-linie" sau "grid-patrate", in functie de ce s-a selectat
 }
 
+// FUNCTII DE SORTARE A ANIMALELOR DIN PAGINA
 function sortAnimalsAZ() {
     var list, i, switching, shouldSwitch, b;
     var detaliiAnimal1, numeAnimal1;
@@ -85,5 +86,14 @@ function sortAnimalsZA() {
             b[i].parentNode.insertBefore(b[i+1],b[i]);
             switching = true;
         }
+    }
+}
+
+
+
+function gridFormatEvent(el) {
+    if(el.id !== lastGrid) {
+        document.getElementById("animale-casute").classList.toggle("show-grid");
+        // lastGrid = el.id;
     }
 }
