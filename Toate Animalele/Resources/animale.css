@@ -102,9 +102,8 @@ body {
     display: flex;
     flex-direction: column;
     width: 25%;
-    height: 100vh;
+    height: 100%;
     margin-left: 10px;
-    border-right: solid black 1px;
 }
 
 #bara-filtre h1 {
@@ -177,6 +176,7 @@ body {
     flex-direction: column;
     width: 75%;
     margin-right: 10px;
+    border-left: solid black 1px;
 }
 
 
@@ -310,23 +310,52 @@ body {
 
 /* definirea unei casete cu un animal in ea */
 .casuta-animal {
-    margin: 20px;
+    margin: 30px;
     position: relative;
-    /* flex-direction: row; */
-    border: solid black 1px;
+    background-color: #ffffff;
     border-radius: 10px;
     width: 25%;
+    cursor: pointer;
+}
+
+.casuta-animal:hover {
+    box-shadow: 0px 0px 15px 1px #0e251a;
+    transition: .3s;
+}
+
+.poza-animal {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
 }
 
 /* numele animalului ce va aparea in caseta */
-.nume-animal {
-    text-align: center;
+.detalii-animal-casuta {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-left: 20px;
+    margin-right: auto;
 }
+
+.nume-animal-latina {
+    font-weight: lighter;
+    font-size: 14px;
+}
+
 
 
 @media only screen and (max-width:1100px) {
     #bara-filtre h1 {
         font-size: 30px;
+    }
+}
+
+
+@media only screen and (max-width:1000px) {
+    .casuta-animal {
+        margin: 15px;
     }
 }
 
@@ -339,6 +368,7 @@ body {
 
     #partea-dreapta-pagina {
         width: 100%;
+        border: none;
     }
 
     .casuta-animal {
@@ -373,7 +403,6 @@ body {
         width: 100%;
         margin-left: 10px;
         margin-right: 10px;
-        border: none;
         height: auto;
     }
 

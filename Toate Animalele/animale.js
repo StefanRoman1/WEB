@@ -11,11 +11,6 @@ function filtruClickEvent(el) {
 }
 
 
-function placeAnimalName(el) {
-    
-}
-
-
 let lastGrid = "grid-patrate";
 
 function changeIfDifferent(el, id) {
@@ -37,4 +32,58 @@ function gridClickEvent(el) {
 
 function gridChangedEvent() {
     let gridCurent = lastGrid; // poate fi "grid-linie" sau "grid-patrate", in functie de ce s-a selectat
+}
+
+function sortAnimalsAZ() {
+    var list, i, switching, shouldSwitch, b;
+    var detaliiAnimal1, numeAnimal1;
+    var detaliiAnimal2, numeAnimal2;
+    list = document.getElementById("animale-casute");
+    switching = true;
+    while(switching) {
+        switching = false;
+        b = list.getElementsByClassName("casuta-animal");
+        for(i = 0; i < (b.length - 1); i++) {
+            shouldSwitch = false;
+            detaliiAnimal1 = b[i].getElementsByTagName("div");
+            numeAnimal1 = detaliiAnimal1[0].getElementsByClassName("nume-animal");
+            detaliiAnimal2 = b[i+1].getElementsByTagName("div");
+            numeAnimal2 = detaliiAnimal2[0].getElementsByClassName("nume-animal");
+            if(numeAnimal1[0].innerHTML.toLocaleLowerCase() > numeAnimal2[0].innerHTML.toLocaleLowerCase()){
+                shouldSwitch = true;
+                break;
+            }
+        }
+        if (shouldSwitch) {
+            b[i].parentNode.insertBefore(b[i+1],b[i]);
+            switching = true;
+        }
+    }
+}
+
+function sortAnimalsZA() {
+    var list, i, switching, shouldSwitch, b;
+    var detaliiAnimal1, numeAnimal1;
+    var detaliiAnimal2, numeAnimal2;
+    list = document.getElementById("animale-casute");
+    switching = true;
+    while(switching) {
+        switching = false;
+        b = list.getElementsByClassName("casuta-animal");
+        for(i = 0; i < (b.length - 1); i++) {
+            shouldSwitch = false;
+            detaliiAnimal1 = b[i].getElementsByTagName("div");
+            numeAnimal1 = detaliiAnimal1[0].getElementsByClassName("nume-animal");
+            detaliiAnimal2 = b[i+1].getElementsByTagName("div");
+            numeAnimal2 = detaliiAnimal2[0].getElementsByClassName("nume-animal");
+            if(numeAnimal1[0].innerHTML.toLocaleLowerCase() < numeAnimal2[0].innerHTML.toLocaleLowerCase()){
+                shouldSwitch = true;
+                break;
+            }
+        }
+        if (shouldSwitch) {
+            b[i].parentNode.insertBefore(b[i+1],b[i]);
+            switching = true;
+        }
+    }
 }
