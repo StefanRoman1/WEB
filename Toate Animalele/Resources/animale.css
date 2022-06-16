@@ -550,7 +550,11 @@ body {
     }
 
     #animale-casute.show-grid>.casuta-animal>.casuta-imagine {
-        width: 25%;
+        width: 35%;
         height: 200px;
+    }
+
+    #animale-casute.show-grid>.casuta-animal>.detalii-animal-casuta {
+        width: 65%;
     }
 }
