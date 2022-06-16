@@ -339,9 +339,6 @@ body {
    -webkit-box-orient: vertical;
 }
 
-/* #animale-casute.show-grid>.casuta-animal>.detalii-animal-casuta>.descriere-animal-continut {
-    display: block;
-} */
 
 /* Partea unde voi avea casetele cu fiecare animal in parte afisat in functie de filtre */
 #animale-casute {
@@ -440,11 +437,6 @@ body {
         border: none;
     }
 
-
-    /* .casuta-animal {
-        width: 35%;
-    } */
-
     #bara-control {
         flex-direction: column;
     }
@@ -453,7 +445,6 @@ body {
         margin-left: 20px;
         margin-right: 5px;
         justify-content: flex-end;
-        /* justify-content: space-between; */
     }
 
     #animale-casute {
@@ -543,5 +534,18 @@ body {
     #check:checked~ul {
         left: 0;
         z-index: 20;
+    }
+}
+
+
+@media only screen and (max-width:605px) {
+    #animale-casute {
+        display: grid;
+        grid-gap: 30px;
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+
+    .casuta-imagine {
+        height: 150px;
     }
 }
