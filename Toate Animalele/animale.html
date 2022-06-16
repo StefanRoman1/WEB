@@ -6,19 +6,21 @@
         <link rel="stylesheet" href="Resources/animale.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
         <script src="animale.js"></script>
-        <title>Toate Animalele</title>
+        <title>Catalog Animale</title>
     </head>
 
     <body>
+        <button onclick="topFunction()" id="to-top-button" title="Mergi la început"><i class="fa fa-arrow-up" aria-hidden="true"></i></button>
+
         <nav class="menu">
             <input type="checkbox" id="check">
             <label for="check" class="toggle"><i class="fas fa-bars"></i></label>
             <img class="logo" src="tigru.jpg">
             <ul>
-                <li class = "item"><a href="#animale">Toate animalele</a></li>
+                <li class = "item"><a href="#animale">Catalog</a></li>
                 <li class = "item"><a href="#program">Program</a></li>
-                <li class = "item"><a href="#harta">Harta</a></li>
-                <li class = "item"><a href="#rezervari">Rezerva un loc</a></li>
+                <li class = "item"><a href="#harta">Hartă</a></li>
+                <li class = "item"><a href="#rezervari">Rezervă un loc</a></li>
                 <li class = "item"><a href="#echipa">Staff</a></li>
             </ul>
         </nav>
@@ -136,7 +138,8 @@
                 
                 <section id="bara-control">
                     <button onclick="createNewAnimalBox()" type="button" id="bara-de-cautare">
-                        Căutați animal
+                        <i class="fa fa-search" aria-hidden="true"></i>
+                        <input type="text" placeholder="  Căutați animal">
                     </button>
                     <section>
                         

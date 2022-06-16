@@ -34,6 +34,14 @@ function gridChangedEvent() {
     let gridCurent = lastGrid; // poate fi "grid-linie" sau "grid-patrate", in functie de ce s-a selectat
 }
 
+
+// GESTIONARE BUTON DE TOP
+function topFunction() {
+    document.body.scrollTop = 0; 
+    document.documentElement.scrollTop = 0;
+  }
+
+
 // FUNCTII DE SORTARE A ANIMALELOR DIN PAGINA
 function sortAnimalsAZ() {
     var list, i, switching, shouldSwitch, b;
@@ -97,6 +105,8 @@ function gridFormatEvent(el) {
         // lastGrid = el.id;
     }
 }
+
+
 
 function createNewAnimalBox() {
     var parent = document.getElementById("animale-casute");
