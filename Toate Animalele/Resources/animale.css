@@ -548,4 +548,9 @@ body {
     .casuta-imagine {
         height: 150px;
     }
+
+    #animale-casute.show-grid>.casuta-animal>.casuta-imagine {
+        width: 25%;
+        height: 200px;
+    }
 }
