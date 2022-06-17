@@ -28,7 +28,7 @@ body {
     text-decoration: none;
     color: #f2f2f2;
     text-transform: uppercase;
-    padding: 10 15px;
+    padding: 10px 15px;
     border-radius: 3px;
     background-color: #22a244;
 }
@@ -38,13 +38,14 @@ body {
     color: #f2f2f2;
     font-size: 30px;
     float: right;
-    line-height: 80px;
     margin-right: 40px;
     cursor: pointer;
-    padding: 10 15px;
+    padding: 10px 15px;
     border-radius: 3px;
-    margin-top: 14px;
+    margin-top: 13px;
+    margin-bottom: auto;
     display: none;
+    align-content: center;
 }
 
 #check {
@@ -74,7 +75,7 @@ body {
 .menu ul {
     background-color: #22a244;
     float: right;
-    margin-right: 20;
+    margin-right: 20px;
 }
 
 .menu ul li {
@@ -245,7 +246,7 @@ body {
     margin: 10px;
     align-content: center;
     background-color: #ffffff;
-    padding: 14 10px;
+    padding: 14px 10px;
     border-radius: 5px;
     cursor: pointer;
     border: none;
@@ -267,10 +268,17 @@ body {
     align-content: center;
     margin: 10px;
     background-color: #ffffff;
-    padding: 10 10px;
+    padding: 8px;
     border-radius: 5px;
     cursor: pointer;
     border: none;
+    align-items: center;
+}
+
+#grid-linie>img,
+#grid-patrate>img {
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
 #bara-de-cautare {
