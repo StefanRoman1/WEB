@@ -167,13 +167,6 @@ body {
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
-
-.buton-grid.show {
-    background-color: #c5c2c2 !important;
-}
-
-
-
 .filtru>ul {
     max-height: 0;
     list-style-type: none;
@@ -190,6 +183,16 @@ body {
     justify-content:flex-start;
     margin-top: auto;
     margin-bottom: auto;
+}
+
+.filtru>ul>li>input {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.filtru>ul>li>p {
+    margin: auto;
+    margin-left: 5px;
 }
 
 .filtru.show>ul {
@@ -213,6 +216,11 @@ body {
     background-color: #ffffff;
     padding: 5px;
     border-radius: 5px;
+}
+
+.nume-filtru>p {
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
 .nume-filtru>img {
@@ -407,6 +415,10 @@ body {
 
 #optiuni-sortare-buton a:hover {
     background-color: #c5c2c2;
+}
+
+.buton-grid.show {
+    background-color: #c5c2c2 !important;
 }
 
 .show {
