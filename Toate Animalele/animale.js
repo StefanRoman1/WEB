@@ -1,3 +1,4 @@
+// FUNCTII PENTRU BUTONUL DE SORTARE AL ANIMALELOR PE PAGINA
 function functieButonSortareAnimale() {
     document.getElementById("optiuni-sortare-buton").classList.toggle("show");
 }
@@ -6,11 +7,19 @@ function restrangereOptiuniSortare() {
     document.getElementById("optiuni-sortare-buton").classList.toggle("show");
 }
 
+
+// FUNCTII DE GESTIONAT FILTRELE
 function filtruClickEvent(el) {
     el.parentElement.classList.toggle("show");
 }
 
+function filtruAnimale(el) {
+    var filtru = el.parentElement.innerHTML;
+    alert(filtru);
+}
 
+
+// GESTIUNEA AFISARII TIPULUI DE GRID
 let lastGrid = "grid-patrate";
 
 function changeIfDifferent(el, id) {
@@ -150,31 +159,6 @@ function cautareAnimale() {
         xml.open("GET", "animaleDeCautat.php?q="+searchInput.value,true);
         xml.send();
         searchInput.value = "";
+        document.getElementById("optiuni-cautare").style.display = "none";
     }
 }
-
-// let anmName;
-// let latinName;
-// let description;
-
-// function getAnimalProprieties(animalName,propriety) {
-//     var request = new XMLHttpRequest();
-//     request.onreadystatechange = function () {
-//         if(this.readyState == 4 && this.status == 200) {
-//             switch(propriety) {
-//                 case "name":
-//                     anmName = this.responseText;
-//                     break;
-//                 case "latinName":
-//                     latinName = this.responseText;
-//                     break;
-//                 case "description":
-//                     description = this.responseText;
-//                     break;
-//             }
-//         }
-//     };
-//     request.open("GET", "getanimal.php?name"+animalName)
-
-// }
-
