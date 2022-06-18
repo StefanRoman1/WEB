@@ -142,10 +142,17 @@
             <section id="partea-dreapta-pagina">
                 
                 <section id="bara-control">
-                    <button type="button" id="bara-de-cautare">
-                        <i class="fa fa-search" aria-hidden="true"></i>
-                        <input type="text" placeholder="  Căutați animal">
-                    </button>
+                    
+                    <div id="cautare-animale">
+                        <div>
+                            <div id="bara-de-cautare">
+                                <i onclick="cautareAnimale()"  class="fa fa-search" aria-hidden="true"></i>
+                                <input id="search-input" type="text" name="searchInput" placeholder="  Căutați animal" onkeyup="showResults(this.value)">
+                            </div>
+                            <div id="optiuni-cautare"><p onclick="trimitereSpreCautare(this)">ana</p><p onclick="trimitereSpreCautare(this)">mama</p></div>
+                        </div>
+                    </div>
+                    
                     <section>
                         
                         <div class="sort-buton-drop">
@@ -172,7 +179,7 @@
     
                 <section id="animale-casute">
                     
-                    <!-- <?php
+                    <?php
                         $con = mysqli_connect("localhost", "tudor", "tudor", "tudor");
                         if (mysqli_connect_errno()){
                             echo 'Failed to connect';
@@ -194,7 +201,7 @@
                                 </div>
                                 <div class="detalii-animal-casuta">
                                     <h3 class="nume-animal">'.$row["nume"].'</h3>
-                                    <h3 class="nume-animal-latina"><i>'.$row["numeLatina"].'.</i></h3>
+                                    <h3 class="nume-animal-latina"><i>'.$row["numeLatina"].'</i></h3>
                                     <div class="descriere-animal">
                                         <h3 class="descriere-animal-titlu">Descriere</h3>
                                         <p class="descriere-animal-continut">'.$row["descriere"].'</p>
@@ -203,8 +210,8 @@
                             </div>';
                             }
                         }
-                    ?> -->
-                    <div class="casuta-animal">
+                    ?>
+                    <!-- <div class="casuta-animal">
                         <div class="casuta-imagine">
                             <div class="imagine"
                                 style="background-image:url(../images/syed-ahmad-yXTr6XeJDV8-unsplash.jpg);">
@@ -314,7 +321,7 @@
                                 <p class="descriere-animal-continut">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ipsum nunc, porttitor eu dignissim ut, rhoncus non velit. In placerat lobortis est, nec commodo tellus congue et.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ipsum nunc, porttitor eu dignissim ut, rhoncus non velit. In placerat lobortis est, nec commodo tellus congue et.Lorem ipsum dolor sit amet, consectetur adipiscing elit. In placerat lobortis est, nec commodo tellus congue et.Lorem ipsum dolor sit amet, consectetur adipiscing elit. In placerat lobortis est, nec commodo tellus congue et.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                             </div> 
                         </div>
-                    </div>
+                    </div> -->
 
                 </section>
 

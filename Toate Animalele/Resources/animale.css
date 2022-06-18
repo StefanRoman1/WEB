@@ -281,16 +281,26 @@ body {
     margin-bottom: auto;
 }
 
-#bara-de-cautare {
+
+#cautare-animale {
     width: 25%;
     margin-top: 10px;
     margin-bottom: 10px;
     margin-left: 30px;
     align-content: center;
-    cursor: pointer;
+}
+
+#cautare-animale>div{
+    width: 100%;
+    position: relative;
+    display: inline-block;
+}
+
+#bara-de-cautare {
+    align-content: center;
     border: none;
     background-color: #ffffff;
-    padding: 10px 10px;
+    padding: 14px 10px;
     border-radius: 5px;
     font-size: 14px;
     display: flex;
@@ -311,11 +321,28 @@ body {
 #bara-de-cautare i {
     width: auto;
     margin: auto;
+    cursor: pointer;
 }
 
-/* #bara-de-cautare:hover input {
-    background-color: #c5c2c2;
-} */
+#optiuni-cautare {
+    display: none;
+    margin-top: 10px;
+    position: absolute;
+    overflow: auto;
+    z-index: 20;
+    background-color: #ffffff;
+    width: 100%;
+    
+}
+
+#optiuni-cautare p {
+    padding: 12px 16px;
+    cursor: pointer;
+}
+
+#optiuni-cautare p:hover {
+    color: blue;
+}
 
 #bara-de-cautare:focus input {
     outline: none;
@@ -453,6 +480,7 @@ body {
     margin-right: auto;
 }
 
+
 .nume-animal-latina {
     font-weight: lighter;
     font-size: 14px;
@@ -486,7 +514,7 @@ body {
         font-size: 30px;
     }
 
-    #bara-de-cautare {
+    #cautare-animale {
         width: auto;
     }
 }
@@ -514,15 +542,6 @@ body {
         flex-direction: column;
     }
 
-    #bara-de-cautare {
-        width: auto;
-        margin-right: 40px;
-    }
-
-    #bara-de-cautare input {
-        width: 95%;
-    }
-
     #bara-control section {
         margin-left: 20px;
         margin-right: 5px;
@@ -533,16 +552,19 @@ body {
         padding-right: 15px;
     }
 
-    #bara-control button {
-        margin-right: 10px;
-        margin-left: 20px;
-    }
-
     #bara-control section.buton-grid {
         display: flex;
         flex-direction: row;
     }
 
+    #cautare-animale {
+        margin-right: 15px;
+        margin-left: 20px;
+    }
+
+    #bara-de-cautare input {
+        width: 95%;
+    }
 
     #bara-filtre {
         display: flex;
