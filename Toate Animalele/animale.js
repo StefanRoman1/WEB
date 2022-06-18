@@ -14,8 +14,8 @@ function filtruClickEvent(el) {
 }
 
 function filtruAnimale(el) {
-    var filtru = el.parentElement.innerHTML;
-    alert(filtru);
+    var filtru = el.nextElementSibling.innerHTML;
+    
 }
 
 

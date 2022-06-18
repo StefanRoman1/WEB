@@ -183,16 +183,19 @@ body {
     justify-content:flex-start;
     margin-top: auto;
     margin-bottom: auto;
+    padding-bottom: 5px;
 }
 
 .filtru>ul>li>input {
+    margin-left: 5px;
     margin-top: auto;
     margin-bottom: auto;
+    cursor: pointer;
 }
 
 .filtru>ul>li>p {
     margin: auto;
-    margin-left: 5px;
+    margin-left: 10px;
 }
 
 .filtru.show>ul {
