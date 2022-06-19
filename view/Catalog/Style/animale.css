@@ -669,6 +669,11 @@ body {
 }
 
 
+/* Media query pentru filtre */
+@media only screen and(max-width:850px) {
+    
+}
+
 @media only screen and (max-width:605px) {
     #animale-casute {
         display: grid;
