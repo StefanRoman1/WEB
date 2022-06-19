@@ -19,8 +19,10 @@ function filtruAnimale(el) {
 }
 
 function afisareFiltre() {
-    document.getElementsByClassName("toate-filtrele")[0].style.display = "block";
-
+    if(document.getElementsByClassName("toate-filtrele")[0].style.display == "block")
+        document.getElementsByClassName("toate-filtrele")[0].style.display = "none";
+    else
+        document.getElementsByClassName("toate-filtrele")[0].style.display = "block";
 }
 
 

@@ -289,6 +289,10 @@ body {
     margin-right: 20px;
 }
 
+#buton-filtru:hover {
+    background-color: #c5c2c2;
+}
+
 /* Butonul care selecteaza dupa ce fac sortarea elementelor din pagina */
 #buton-sortare {
     width: auto;
@@ -655,12 +659,6 @@ body {
 }
 
 
-/* Media query pentru filtre pe mobile */
-@media only screen and (max-width:850px) {
-    
-}
-
-
 /* Media query pentru navbar */
 @media only screen and (max-width:850px) {
     .toggle {
@@ -711,11 +709,6 @@ body {
     }
 }
 
-
-/* Media query pentru filtre */
-@media only screen and(max-width:850px) {
-
-}
 
 @media only screen and (max-width:605px) {
     #animale-casute {
