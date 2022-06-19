@@ -6,4 +6,4 @@ daunatoare etc.), caracteristici (de exemplu, dependenta de clima, periculozitat
 regim alimentar (vegetarian, carnivor, omnivor), mod de inmultire si altele. Se vor pune la dispozitie mecanisme de cautare/filtrare/prezentare
 multi-criteriala -- de pilda, afisarea tuturor mamiferelor cu blana de origine europeana ce pot fi dresate sau generarea unei liste de pasari/taratoare
 capabile sa supravietuiasca in conditii desertice. Datele vor putea fi importate/exportate via fisiere disponibile in formatele JSON si XML.
-king
+
