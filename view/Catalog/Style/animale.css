@@ -264,6 +264,31 @@ body {
     margin-left: auto;
 }
 
+#buton-filtru-mobile {
+    display: none;
+}
+
+#buton-filtru {
+    width: auto;
+    margin: 10px;
+    align-content: center;
+    background-color: #ffffff;
+    padding: 14px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+}
+
+#buton-filtru img {
+    margin-right: 30px;
+    margin-left: 20px;
+}
+
+#buton-filtru p {
+    font-size: 14px;
+    margin-right: 20px;
+}
+
 /* Butonul care selecteaza dupa ce fac sortarea elementelor din pagina */
 #buton-sortare {
     width: auto;
@@ -571,8 +596,24 @@ body {
     }
 
     #bara-control section {
-        margin-left: 20px;
+        margin-left: 15px;
         margin-right: 5px;
+    }
+
+    #buton-filtru-mobile {
+        display: block;
+    }
+
+    #buton-filtru img,
+    #buton-sortare img {
+        margin-right: 15px;
+        margin-left: 10px;
+    }
+    
+    #buton-filtru p,
+    #buton-sortare p {
+        font-size: 12px;
+        margin-right: 10px;
     }
 
     #animale-casute {
