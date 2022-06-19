@@ -3,6 +3,10 @@ function topFunction() {
     document.documentElement.scrollTop = 0;
   }
 
-function alertFunction() {
-  alert('Tou are not logged in!');
+function alertFunction(isSesion) {
+  if(isSesion) {
+    alert('Esti logat tank');
+  }
+  else
+    alert('You are not logged in!');
 }

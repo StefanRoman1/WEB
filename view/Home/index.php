@@ -10,7 +10,7 @@ if (isset($_SESSION['username'])) {
     echo "<p>Aici e logat cineva deja!!!!!!</p>";
 }
 else {
-    echo "<p> nu este </p>";
+    echo "<p>nu este </p>";
 }
 
 ?>
@@ -21,6 +21,7 @@ else {
         <link href="./resurse/resurse.css" type="text/css" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
         <script src="Scripts/scripts.js"></script>
+        <!-- <script src="https://code.jquery.com/jquery-1.10.2.js"></script> -->
         <title>FIMURO</title>
     </head>
     <body class = "background">
@@ -106,7 +107,7 @@ else {
        <br><br>
        <p class = "text">
         <form action="../Booking/index.html">
-            <button class="button" onclick="alertFunction()"><span>Rezerva </span></button>
+            <button class="button" onclick="alertFunction(<?php isset($_SESSION['username']) ?>)"><span>Rezerva </span></button>
         </form>
        </p>
        <h1 class = "title" id="echipa"> Staff </h1>
