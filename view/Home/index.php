@@ -7,9 +7,11 @@ session_start();
 error_reporting(0);
 
 if (isset($_SESSION['username'])) {
+    $logat = true;
     echo "<p>Aici e logat cineva deja!!!!!!</p>";
 }
 else {
+    $logat = false;
     echo "<p>nu este </p>";
 }
 
@@ -107,7 +109,7 @@ else {
        <br><br>
        <p class = "text">
         <form action="../Booking/index.html">
-            <button class="button" onclick="alertFunction(<?php isset($_SESSION['username']) ?>)"><span>Rezerva </span></button>
+            <button class="button" onclick="alertFunction(<?php json_encode($logat) ?>)"><span>Rezerva </span></button>
         </form>
        </p>
        <h1 class = "title" id="echipa"> Staff </h1>
