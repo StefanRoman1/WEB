@@ -108,8 +108,8 @@ else {
        </p>
        <br><br>
        <p class = "text">
-        <form action="../Booking/index.html">
-            <button class="button" onclick="alertFunction(<?php json_encode($logat) ?>)"><span>Rezerva </span></button>
+        <form>
+            <button class="button" onclick="alertFunction('<?php echo($logat)?>')"><span>Rezerva </span></button>
         </form>
        </p>
        <h1 class = "title" id="echipa"> Staff </h1>

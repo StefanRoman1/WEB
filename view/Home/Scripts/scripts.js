@@ -4,10 +4,8 @@ function topFunction() {
   }
 
 function alertFunction(isSesion) {
-  alert(isSesion);
-  alert('sigur ii bun ?');
   if(isSesion) {
-    alert('Esti logat tank');
+    window.location = "Proiect gros/WEB/view/Booking/index.html";
   }
   else
     alert('You are not logged in!');
