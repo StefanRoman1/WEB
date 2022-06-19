@@ -15,7 +15,7 @@
                 $xml=simplexml_load_file('uploadedfile') or die("Error: Cannot create object");
                 $name = (string) $xml->name;
                 $description = (string) $xml->description;
-                add_animal($name, $description);
+                //add_animal($name, $description);
                 return true;
             }
             else{
