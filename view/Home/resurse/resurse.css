@@ -1,0 +1,308 @@
+* {
+    font-family: Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+.background {
+      background-color: #ebfff7;
+  }
+
+  /* Add a black background color to the top navigation */
+  .menu {
+    position: sticky;
+    background-color: #22a244;
+    list-style-type: none;
+    
+    font-size: 17px;
+    width: 100%;
+    height: 80px;
+}
+
+.item a {
+    text-decoration: none;
+    color: #f2f2f2;
+    text-transform: uppercase;
+    padding: 10 15px;
+    border-radius: 3px;
+    background-color: #22a244;
+}
+
+.toggle {
+    background-color: #22a244;
+    color: #f2f2f2;
+    font-size: 30px;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    padding: 10 15px;
+    border-radius: 3px;
+    margin-top: 14px;
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
+.toggle:hover {
+    background-color: #0e251a;
+    transition: all .5s;
+}
+
+.toggle i {
+    background-color: #22a244;
+}
+
+.toggle:hover i {
+    background-color: #0e251a;
+    transition: .5s;
+}
+
+.logo {
+    background-color: #22a244;
+    width: 115px;
+    padding: 15px 0px 13px 40px;
+}
+
+.menu ul {
+    background-color: #22a244;
+    float: right;
+    margin-right: 20px;
+}
+
+.menu ul li {
+    background-color: #22a244;
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+
+.item a:hover {
+    background-color: #0e251a;
+    transition: .5s;
+}
+
+  #intro {
+    background-image:linear-gradient(to bottom,rgba(99, 49, 226, 0) 0%,
+    #ebfff7 100%), url('../../../img/pages/acasa/tigru.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+  }
+
+  .title{
+    color:#00291f;
+    font-size: 40px;
+    text-align: center;
+    margin: 20px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', Verdana, sans-serif;
+  }
+
+  .text{
+      color : #00291f;
+      font-size:17;
+      text-align: center;
+      padding-left: 100px;
+      padding-right: 100px;
+      font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', Verdana, sans-serif;
+  }
+
+  .tabel
+  {
+    border:1px solid black;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .th
+  {
+    border:1px solid black;
+    padding: 5px;
+    font-size: larger;
+  }
+
+  .map{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+  }
+
+  .staff{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width:  200px;
+    height: 200px;
+  }
+
+  .tabel_staff{
+      padding-left: 100px;
+      padding-right: 100px;
+  }
+
+  .center {
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+    height:500;
+    background-color: #a5ceba;
+    margin-left: 600px;
+    margin-right: 600px;
+    font-size: 20px;
+  }
+
+  @media only screen and (max-width:850px) {
+    .toggle {
+        display: block;
+        background-color: #22a244;
+    }
+
+    .toggle i {
+        background-color: #22a244;
+    }
+
+    .menu {
+        position: absolute;
+    }
+
+    .menu ul {
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        background-color: #0d7529;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+
+    .menu ul li {
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+        background-color: #0d7529;
+    }
+
+    .menu ul li a {
+        font-size: 20px;
+        background-color: #0d7529;
+    }
+
+    .menu ul li a:hover {
+        background: none;
+        color: #0e251a;
+        transition: none;
+    }
+
+    #check:checked~ul {
+        left: 0;
+        z-index: 20;
+    }
+}
+
+/*Buton de cumparat bilet */
+.button{
+  display: grid;
+  vertical-align:middle;
+  border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: auto;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+/* ----------------------------- */
+
+/* Buton de dus inapoi sus */
+#to-top-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 19;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: #ffffff;
+    background-color: #eda02e;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+#to-top-button i {
+    transform: scale(1.2);
+}
+
+#to-top-button:hover {
+    transform: scale(1.2);
+    transition: 0.3s;
+}
+
+#to-top-button:hover i {
+    transform: scale(1.4);
+    transition: 0.3s;
+}
+/* ----------------------------- */
+
+/*-----------tabel staff------------------*/
+/* Create three equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 33.33%;
+    padding: 10px;
+    
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 800px) {
+    .column {
+      width: 100%;
+    }
+  }
+

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="Style/animale.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="../../controller/catalogController.js"></script>
+        <script src="animale.js"></script>
+        
+        <title>Catalog</title>
+    </head>
+
+    <body>
+        <button onclick="topFunction()" id="to-top-button" title="Mergi la început">
+            <i class="fa fa-arrow-up" aria-hidden="true"></i>
+        </button>
+
+        <nav class="menu">
+            <input type="checkbox" id="check">
+            <label for="check" class="toggle"><i class="fas fa-bars"></i></label>
+            <img class="logo" src="../../img/pages/tigru.jpg">
+            <ul>
+                <li class = "item"><a href="../Home/index.html">Acasă</a></li>
+                <li class = "item"><a href="animale.html">Catalog</a></li>
+                <li class = "item"><a href="../Booking/index.html">Rezervă un loc</a></li>
+                <li class = "item"><a href="../LoginRegister/index.php">Login</a></li>
+                <li class = "item" id="logout"><a href="../LoginRegister/logout.php">Logout</a></li>
+            </ul>
+        </nav>
+
+        <main id="pagina-animale">
+            
+            <section id="bara-filtre">
+                <h1>Animalele <br> din grădină</h1>
+    
+                <section class="toate-filtrele">
+    
+                    <div class="filtru" id="filtru-origine">
+                        <div class="nume-filtru" onclick="filtruClickEvent(this)">
+                            <p>Origine</p>
+                            <img src="../../img/pages/catalog/chevron-up.png" alt="up-arrow-filter-box">
+                        </div>
+    
+                        <ul>
+                            <li> <input onclick="filtruAnimale(this)" type="checkbox" name="opname" value="opval"><p>lorem ipsum</p></li>
+                            <li> <input onclick="filtruAnimale(this)" type="checkbox" name="opname" value="opval"><p>lorem ipsum</p></li>
+                            <li> <input onclick="filtruAnimale(this)" type="checkbox" name="opname" value="opval"><p>lorem ipsum</p></li>
+                            <li> <input onclick="filtruAnimale(this)" type="checkbox" name="opname" value="opval"><p>lorem ipsum</p></li>
+                            <li> <input onclick="filtruAnimale(this)" type="checkbox" name="opname" value="opval"><p>lorem ipsum</p></li>
+                        </ul>
+    
+                    </div>
+    
+                    <div class="filtru" id="filtru-mediu-de-viata">
+                        <div class="nume-filtru" onclick="filtruClickEvent(this)">
+                            <p>Mediu de viață</p>
+                            <img src="../../img/pages/catalog/chevron-up.png" alt="up-arrow-filter-box">
+                        </div>
+    
+                        <ul>
+                            <li> <input onclick="filtruAnimale(this)" type="checkbox" name="opname" value="opval"><p>Desertic</p></li>
+                            <li> <input onclick="filtruAnimale(this)" type="checkbox" name="opname" value="opval"><p>Terestru</p></li>
+                            <li> <input onclick="filtruAnimale(this)" type="checkbox" name="opname" value="opval"><p>Acvatic</p></li>
+                            <li> <input onclick="filtruAnimale(this)" type="checkbox" name="opname" value="opval"><p>Aerian</p></li>
+                            <li> <input onclick="filtruAnimale(this)" type="checkbox" name="opname" value="opval"><p>Subteran</p></li>
+                        </ul>
+                    </div>
+
+                    <div class="filtru" id="filtru-hrana">
+                        <div class="nume-filtru" onclick="filtruClickEvent(this)">
+                            <p>Hrană</p>
+                            <img src="../../img/pages/catalog/chevron-up.png" alt="up-arrow-filter-box">
+                        </div>
+    
+                        <ul>
+                            <li> <input onclick="filtruAnimale(this)" type="checkbox" name="opname" value="opval"><p>lorem ipsum</p></li>
+                            <li> <input onclick="filtruAnimale(this)" type="checkbox" name="opname" value="opval"><p>lorem ipsum</p></li>
+                            <li> <input onclick="filtruAnimale(this)" type="checkbox" name="opname" value="opval"><p>lorem ipsum</p></li>
+                            <li> <input onclick="filtruAnimale(this)" type="checkbox" name="opname" value="opval"><p>lorem ipsum</p></li>
+                            <li> <input onclick="filtruAnimale(this)" type="checkbox" name="opname" value="opval"><p>lorem ipsum</p></li>
+                        </ul>
+                    </div>
+
+                    <div class="filtru" id="filtru-tip-de-specie">
+                        <div class="nume-filtru" onclick="filtruClickEvent(this)">
+                            <p>Tip de specie</p>
+                            <img src="../../img/pages/catalog/chevron-up.png" alt="up-arrow-filter-box">
+                        </div>
+    
+                        <ul>
+                            <li> <input onclick="filtruAnimale(this)" type="checkbox" name="opname" value="opval"><p>lorem ipsum</p></li>
+                            <li> <input onclick="filtruAnimale(this)" type="checkbox" name="opname" value="opval"><p>lorem ipsum</p></li>
+                            <li> <input onclick="filtruAnimale(this)" type="checkbox" name="opname" value="opval"><p>lorem ipsum</p></li>
+                            <li> <input onclick="filtruAnimale(this)" type="checkbox" name="opname" value="opval"><p>lorem ipsum</p></li>
+                            <li> <input onclick="filtruAnimale(this)" type="checkbox" name="opname" value="opval"><p>lorem ipsum</p></li>
+                        </ul>
+                    </div>
+
+                    <div class="filtru" id="filtru-domesticire">
+                        <div class="nume-filtru" onclick="filtruClickEvent(this)">
+                            <p>Domesticire</p>
+                            <img src="../../img/pages/catalog/chevron-up.png" alt="up-arrow-filter-box">
+                        </div>
+    
+                        <ul>
+                            <li> <input onclick="filtruAnimale(this)" type="checkbox" name="opname" value="opval"><p>lorem ipsum</p></li>
+                            <li> <input onclick="filtruAnimale(this)" type="checkbox" name="opname" value="opval"><p>lorem ipsum</p></li>
+                            <li> <input onclick="filtruAnimale(this)" type="checkbox" name="opname" value="opval"><p>lorem ipsum</p></li>
+                            <li> <input onclick="filtruAnimale(this)" type="checkbox" name="opname" value="opval"><p>lorem ipsum</p></li>
+                            <li> <input onclick="filtruAnimale(this)" type="checkbox" name="opname" value="opval"><p>lorem ipsum</p></li>
+                        </ul>
+                    </div>
+
+                    <div class="filtru" id="filtru-hrana">
+                        <div class="nume-filtru" onclick="filtruClickEvent(this)">
+                            <p>Locație</p>
+                            <img src="../../img/pages/catalog/chevron-up.png" alt="up-arrow-filter-box">
+                        </div>
+    
+                        <ul>
+                            <li> <input onclick="filtruAnimale(this)" type="checkbox" name="opname" value="opval"><p>lorem ipsum</p></li>
+                            <li> <input onclick="filtruAnimale(this)" type="checkbox" name="opname" value="opval"><p>lorem ipsum</p></li>
+                            <li> <input onclick="filtruAnimale(this)" type="checkbox" name="opname" value="opval"><p>lorem ipsum</p></li>
+                            <li> <input onclick="filtruAnimale(this)" type="checkbox" name="opname" value="opval"><p>lorem ipsum</p></li>
+                            <li> <input onclick="filtruAnimale(this)" type="checkbox" name="opname" value="opval"><p>lorem ipsum</p></li>
+                        </ul>
+                    </div>
+    
+                </section>
+    
+            </section>
+
+            
+            <section id="partea-dreapta-pagina">
+                
+                <section id="bara-control">
+                    
+                    <div id="cautare-animale">
+                        <div>
+                            <div id="bara-de-cautare">
+                                <i onclick="cautareAnimale()"  class="fa fa-search" aria-hidden="true"></i>
+                                <input id="search-input" type="text" name="searchInput" placeholder="  Căutați animal" onkeyup="showResults(this.value)">
+                            </div>
+                            <div id="optiuni-cautare"><p onclick="trimitereSpreCautare(this)">ana</p><p onclick="trimitereSpreCautare(this)">mama</p></div>
+                        </div>
+                    </div>
+                    
+                    <section>
+                        
+                        <div class="sort-buton-drop">
+                            <button onclick="functieButonSortareAnimale()" id="buton-sortare">
+                                <p> <img src="../../img/pages/catalog/Vector (Stroke).png" alt="down-arrow-sort-button"> Sortați după</p>
+                            </button>
+                            <div onclick="restrangereOptiuniSortare()" id="optiuni-sortare-buton">
+                                <a onclick="sortAnimalsAZ()">După nume A-Z</a>
+                                <a onclick="sortAnimalsZA()">După nume Z-A</a>
+                            </div>
+                        </div>
+                        
+                        <button type="button" id="grid-linie" class="buton-grid" 
+                            onclick="gridFormatEvent(this);gridClickEvent(this);">
+                            <img src="../../img/pages/catalog/server.png" alt="line-grid-icon">
+                        </button>
+                        <button type="button" id="grid-patrate" class="buton-grid show" 
+                            onclick="gridFormatEvent(this);gridClickEvent(this);">
+                            <img src="../../img/pages/catalog/grid.png" alt="square-grid-icon">
+                        </button>
+
+                    </section>
+                </section>
+    
+                <section id="animale-casute">
+                    <!-- Aici vor veni casutele cu animale -->
+                </section>
+
+            </section>
+
+        </main>
+
+    </body>
+</html>

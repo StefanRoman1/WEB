@@ -1,0 +1,691 @@
+* {
+    font-family: Helvetica, Arial, sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: manrope-regular;
+    src: url(Fonts/Manrope-Regular.ttf);
+}
+
+body {
+    background-color: #d2e9d8;
+}
+
+/* Meniu */
+.menu {
+    background-color: #22a244;
+    list-style-type: none;
+    position: sticky;
+    font-size: 17px;
+    width: 100%;
+    height: 80px;
+}
+
+.item a {
+    text-decoration: none;
+    color: #f2f2f2;
+    text-transform: uppercase;
+    padding: 10px 15px;
+    border-radius: 3px;
+    background-color: #22a244;
+}
+
+.toggle {
+    background-color: #22a244;
+    color: #f2f2f2;
+    font-size: 30px;
+    float: right;
+    margin-right: 40px;
+    cursor: pointer;
+    padding: 10px 15px;
+    border-radius: 3px;
+    margin-top: 13px;
+    margin-bottom: auto;
+    display: none;
+    align-content: center;
+}
+
+#check {
+    display: none;
+}
+
+.toggle:hover {
+    background-color: #0e251a;
+    transition: all .5s;
+}
+
+.toggle i {
+    background-color: #22a244;
+}
+
+.toggle:hover i {
+    background-color: #0e251a;
+    transition: .5s;
+}
+
+.logo {
+    background-color: #22a244;
+    width: 115px;
+    padding: 15px 0px 13px 40px;
+}
+
+.menu ul {
+    background-color: #22a244;
+    float: right;
+    margin-right: 20px;
+}
+
+.menu ul li {
+    background-color: #22a244;
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+
+.item a:hover {
+    background-color: #0e251a;
+    transition: .5s;
+}
+
+#logout {
+    display: none;
+}
+/* ----------------------------- */
+
+
+/* Buton de dus inapoi sus */
+#to-top-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 19;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: #ffffff;
+    background-color: #eda02e;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+#to-top-button i {
+    transform: scale(1.2);
+}
+
+#to-top-button:hover {
+    transform: scale(1.2);
+    transition: 0.3s;
+}
+
+#to-top-button:hover i {
+    transform: scale(1.4);
+    transition: 0.3s;
+}
+/* ----------------------------- */
+
+
+/* Pagina principala */
+#pagina-animale {
+    display: flex;
+    flex-direction: row;
+}
+
+/*  Partea stanga a paginii */
+#bara-filtre {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    height: 100%;
+    margin-left: 10px;
+}
+
+#bara-filtre h1 {
+    flex-wrap: wrap;
+    font-size: 50px;
+    color: rgb(24, 24, 24);
+    font-weight: 10px;
+    margin-left: 30px;
+    margin-right: 50px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.toate-filtrele {
+    display: flex;
+    flex-direction: column;
+    margin-left: 30px;
+    margin-right: 50px;
+    margin-top: 20px;
+}
+
+.filtru {
+    flex-direction: column;
+    margin-bottom: 20px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.filtru>ul {
+    max-height: 0;
+    list-style-type: none;
+    overflow: hidden;
+    transition: max-height 0.15s ease-out;
+    background: #ffffff;
+    border-radius: 0 0 5px 5px;
+    padding: 0 5px;
+}
+
+.filtru>ul>li {
+    display: flex;
+    flex-direction: row;
+    justify-content:flex-start;
+    margin-top: auto;
+    margin-bottom: auto;
+    padding-bottom: 5px;
+}
+
+.filtru>ul>li>input {
+    margin-left: 5px;
+    margin-top: auto;
+    margin-bottom: auto;
+    cursor: pointer;
+}
+
+.filtru>ul>li>p {
+    margin: auto;
+    margin-left: 10px;
+}
+
+.filtru.show>ul {
+    max-height: 100%;
+    transition: max-height 0.25s ease-in;
+}
+
+.filtru.show>.nume-filtru>img {
+    transform: scaleY(-1);
+}
+
+.filtru.show>.nume-filtru {
+    border-radius: 5px 5px 0 0;
+}
+
+.nume-filtru {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+    background-color: #ffffff;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.nume-filtru>p {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.nume-filtru>img {
+    cursor: pointer;
+}
+
+
+
+/* Partea dreapta a paginii */
+#partea-dreapta-pagina {
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    margin-right: 10px;
+    border-left: solid black 1px;
+}
+
+
+/* Bara de sus din partea dreapta*/
+#bara-control {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    line-height: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#bara-control section {
+    display: flex;
+    flex-direction: row;
+    margin-right: 20px;
+}
+
+#bara-control section button,
+#bara-control section.sort-buton-drop {
+    margin-left: auto;
+}
+
+/* Butonul care selecteaza dupa ce fac sortarea elementelor din pagina */
+#buton-sortare {
+    width: auto;
+    margin: 10px;
+    align-content: center;
+    background-color: #ffffff;
+    padding: 14px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+}
+
+#buton-sortare img {
+    margin-right: 30px;
+    margin-left: 20px;
+}
+
+#buton-sortare p {
+    font-size: 14px;
+    margin-right: 20px;
+}
+
+#grid-linie,
+#grid-patrate {
+    width: auto;
+    align-content: center;
+    margin: 10px;
+    background-color: #ffffff;
+    padding: 8px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    align-items: center;
+}
+
+#grid-linie>img,
+#grid-patrate>img {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+
+#cautare-animale {
+    width: 25%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 30px;
+    align-content: center;
+}
+
+#cautare-animale>div{
+    width: 100%;
+    position: relative;
+    display: inline-block;
+}
+
+#bara-de-cautare {
+    align-content: center;
+    border: none;
+    background-color: #ffffff;
+    padding: 14px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#bara-de-cautare input {
+    width: 85%;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    text-decoration: none;
+    border: solid black 0.5px;
+    height: 100%;
+}
+
+#bara-de-cautare i {
+    width: auto;
+    margin: auto;
+    cursor: pointer;
+}
+
+#optiuni-cautare {
+    display: none;
+    margin-top: 10px;
+    position: absolute;
+    overflow: auto;
+    z-index: 20;
+    background-color: #ffffff;
+    width: 100%;
+    
+}
+
+#optiuni-cautare p {
+    padding: 12px 16px;
+    cursor: pointer;
+}
+
+#optiuni-cautare p:hover {
+    color: blue;
+}
+
+#bara-de-cautare:focus input {
+    outline: none;
+}
+
+#bara-de-cautare:hover {
+    background-color: #c5c2c2;
+}
+
+#bara-de-cautare:hover i {
+    transform: scale(1.2);
+    transition: 0.15s;
+}
+
+#buton-sortare:hover {
+    background-color: #c5c2c2;
+}
+
+#grid-linie:hover {
+    background-color: #c5c2c2;
+}
+
+#grid-patrate:hover {
+    background-color: #c5c2c2;
+}
+
+
+.sort-buton-drop {
+    position: relative;
+    display: inline-block;
+}
+
+#optiuni-sortare-buton {
+    display: none;
+    position: absolute;
+    overflow: auto;
+    z-index: 20;
+    background-color: #ffffff;
+    min-width: 160px;
+}
+
+#optiuni-sortare-buton a {
+    color: black;
+    text-decoration: none;
+    display: block;
+    padding: 12px 16px;
+    cursor: pointer;
+}
+
+#optiuni-sortare-buton a:hover {
+    background-color: #c5c2c2;
+}
+
+.buton-grid.show {
+    background-color: #c5c2c2 !important;
+}
+
+.show {
+    display: block !important;
+}
+
+#animale-casute.show-grid {
+    grid-template-columns: 1fr !important;
+}
+
+#animale-casute.show-grid>.casuta-animal {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+}
+
+#animale-casute.show-grid>.casuta-animal>.casuta-imagine {
+    width: 25%;
+}
+
+#animale-casute.show-grid>.casuta-animal>.detalii-animal-casuta {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 75%;
+}
+
+#animale-casute.show-grid>.casuta-animal>.detalii-animal-casuta>.descriere-animal {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: auto;
+    margin-right: 0.4em;
+}
+
+#animale-casute.show-grid>.casuta-animal>.detalii-animal-casuta>.descriere-animal>.descriere-animal-continut {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 4; 
+    line-clamp: 4; 
+    -webkit-box-orient: vertical;
+}
+
+
+/* Partea unde voi avea casetele cu fiecare animal in parte afisat in functie de filtre */
+#animale-casute {
+    display: grid;
+    grid-gap: 30px;
+    padding: 30px;
+    justify-content: space-between;
+    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+    width: 100%;
+}
+
+/* definirea unei casete cu un animal in ea */
+.casuta-animal {
+    position: relative;
+    background-color: #ffffff;
+    border-radius: 10px;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.casuta-animal:hover {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    transition: .3s;
+}
+
+.casuta-animal:hover .imagine {
+    transform: scale(1.2);
+}
+
+/* numele animalului ce va aparea in caseta */
+.detalii-animal-casuta {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-left: 20px;
+    margin-right: auto;
+}
+
+
+.nume-animal-latina {
+    font-weight: lighter;
+    font-size: 14px;
+}
+
+.descriere-animal {
+    display: none;
+    margin-top:0.3em;
+}
+
+.casuta-imagine {
+    inset: 0;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.casuta-imagine>.imagine {
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: transform 0.2s ease-in-out;
+    transition: transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
+}
+
+
+@media only screen and (max-width:1100px) {
+    #bara-filtre h1 {
+        font-size: 30px;
+    }
+
+    #cautare-animale {
+        width: auto;
+    }
+}
+
+
+@media only screen and (max-width:1000px) {
+    /* .casuta-animal {
+        margin: 15px;
+    } */
+}
+
+/* editarea continutului paginii in functie de dimensiunea dispozitivului */
+@media only screen and (max-width:850px) {
+    #pagina-animale {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #partea-dreapta-pagina {
+        width: 100%;
+        border: none;
+    }
+
+    #bara-control {
+        flex-direction: column;
+    }
+
+    #bara-control section {
+        margin-left: 20px;
+        margin-right: 5px;
+    }
+
+    #animale-casute {
+        padding-left: 20px;
+        padding-right: 15px;
+    }
+
+    #bara-control section.buton-grid {
+        display: flex;
+        flex-direction: row;
+    }
+
+    #cautare-animale {
+        margin-right: 15px;
+        margin-left: 20px;
+    }
+
+    #bara-de-cautare input {
+        width: 95%;
+    }
+
+    #bara-filtre {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-left: 10px;
+        margin-right: 10px;
+        height: auto;
+    }
+
+    #bara-filtre h1 {
+        margin-top: 100px;
+        font-size: 50px;
+    }
+
+    .toate-filtrele {
+        display: none;
+    }
+}
+
+
+/* Media query pentru filtre pe mobile */
+@media only screen and (max-width:850px) {}
+
+
+/* Media query pentru navbar */
+@media only screen and (max-width:850px) {
+    .toggle {
+        display: block;
+        background-color: #22a244;
+    }
+
+    .toggle i {
+        background-color: #22a244;
+    }
+
+    .menu {
+        position: absolute;
+    }
+
+    .menu ul {
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        background-color: #0d7529;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+
+    .menu ul li {
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+        background-color: #0d7529;
+    }
+
+    .menu ul li a {
+        font-size: 20px;
+        background-color: #0d7529;
+    }
+
+    .menu ul li a:hover {
+        background: none;
+        color: #0e251a;
+        transition: none;
+    }
+
+    #check:checked~ul {
+        left: 0;
+        z-index: 20;
+    }
+}
+
+
+@media only screen and (max-width:605px) {
+    #animale-casute {
+        display: grid;
+        grid-gap: 30px;
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+
+    .casuta-imagine {
+        height: 150px;
+    }
+
+    #animale-casute.show-grid>.casuta-animal>.casuta-imagine {
+        width: 35%;
+        height: 200px;
+    }
+
+    #animale-casute.show-grid>.casuta-animal>.detalii-animal-casuta {
+        width: 65%;
+    }
+}
