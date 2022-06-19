@@ -1,11 +1,11 @@
 <?php 
     include "database.php";
     
-    function get_animal_by_name($name){
+    function get_animal_by_name($nume){
         global $db;
-        $query = 'SELECT * FROM animals WHERE NUME = :name';
+        $query = 'SELECT * FROM animals WHERE NUME = :nume';
         $statement = $db->prepare($query);
-        $statement->bindValue(':name', $name);
+        $statement->bindValue(':nume', $nume);
         $statement->execute();
         $animal_info = $statement->fetchAll();
         $statement->closeCursor();
