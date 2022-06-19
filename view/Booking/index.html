@@ -1,43 +1,51 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <link rel="stylesheet" href="Style/style1.css">
-        <title>Rezerva un loc</title>
-    </head>
-    <body>
-        <h1> Rezerva un loc !</h1>
-        <form action="reservation.php" method="post">
-            <div class="elem-group">
-              <label for="name">Your Name</label>
-              <input type="text" id="name" name="visitor_name" placeholder="John Doe" pattern=[A-Z\sa-z]{3,20} required>
-            </div>
-            <div class="elem-group">
-              <label for="email">Your E-mail</label>
-              <input type="email" id="email" name="visitor_email" placeholder="john.doe@email.com" required>
-            </div>
-            <div class="elem-group">
-              <label for="phone">Your Phone</label>
-              <input type="tel" id="phone" name="visitor_phone" placeholder="498-348-3872" pattern=(\d{3})-?\s?(\d{3})-?\s?(\d{4}) required>
-            </div>
-            <hr>
-            <div class="elem-group inlined">
-              <label for="adult">Adults</label>
-              <input type="number" id="adult" name="total_adults" placeholder="2" min="1" required>
-            </div>
-            <div class="elem-group inlined">
-              <label for="child">Children</label>
-              <input type="number" id="child" name="total_children" placeholder="2" min="0" required>
-            </div>
-            <div class="elem-group inlined">
-              <label for="checkin-date">Check-in Date</label>
-              <input type="date" id="checkin-date" name="checkin" required>
-            </div>
-            <hr>
-            <div class="elem-group">
-              <label for="message">Anything Else?</label>
-              <textarea id="message" name="visitor_message" placeholder="Tell us anything else that might be important." required></textarea>
-            </div>
-            <button type="submit">Rezerva!</button>
-          </form>
-    </body>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+	<link rel="stylesheet" type="text/css" href="Style/style1.css">
+
+	<title>Rezerva un loc</title>
+</head>
+<body>
+	<nav class="menu">
+		<input type="checkbox" id="check">
+		<label for="check" class="toggle"><i class="fas fa-bars"></i></label>
+		<img class="logo" src="../../img/pages/tigru.jpg">
+		<ul>
+			<li class = "item"><a href="../Catalog/animale.html">Catalog</a></li>
+			<li class = "item"><a href="../Home/index.html">Home</a></li>
+		</ul>
+	</nav>
+	<div class="container">
+		<form action="" method="POST" class="login-email">
+			<p class="login-text" style="font-size: 2rem; font-weight: 800;">Rezervation form</p>
+			<div class="input-group">
+				<input type="email" placeholder="Email" name="email" value="<?php echo $email; ?>" required>
+			</div>
+      <div class="input-group">
+				<input type="text" placeholder="Nume" name="nume" value="<?php echo $nume; ?>" required>
+			</div>
+      <div class="input-group">
+				<input type="text" placeholder="Prenume" name="prenume" value="<?php echo $prenume; ?>" required>
+			</div>
+      <div class="input-group">
+				<input type="datetime-local" placeholder="Check-in date" name="data" value="<?php echo $data; ?>" required>
+			</div>
+      <div class="input-group">
+        <input type="number" id="quantity" placeholder="Children" name="copii" min="1" max="50" value="<?php echo $copii; ?>" required>
+			</div>
+      <div class="input-group">
+        <input type="number" id="quantity" placeholder="Adults" name="adulti" min="1" max="50" value="<?php echo $adulti; ?>" required>
+			</div>
+			<div class="input-group">
+				<button name="submit" class="btn">Rezerva</button>
+			</div>
+      
+		</form>
+	</div>
+</body>
 </html>

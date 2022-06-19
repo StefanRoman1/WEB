@@ -1,3 +1,20 @@
+<?php 
+
+include_once '../../model/config.php';
+
+session_start();
+
+error_reporting(0);
+
+if (isset($_SESSION['username'])) {
+    echo "<p>Aici e logat cineva deja!!!!!!</p>";
+}
+else {
+    echo "<p> nu este </p>";
+}
+
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
