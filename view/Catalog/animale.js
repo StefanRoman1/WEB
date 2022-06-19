@@ -18,6 +18,10 @@ function filtruAnimale(el) {
     
 }
 
+function afisareFiltre() {
+    document.getElementsByClassName("toate-filtrele")[0].style.display = "block";
+
+}
 
 
 // GESTIUNEA AFISARII TIPULUI DE GRID
