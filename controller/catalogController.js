@@ -61,3 +61,10 @@ function incarcareAnimale() {
 }
 
 window.onload = incarcareAnimale;
+
+
+// DESCHIDERE PAGINA ANIMAL
+function paginaAnimal(el) {
+    var animalName = el.children[1].children[0].innerHTML;
+    alert(animalName);
+}

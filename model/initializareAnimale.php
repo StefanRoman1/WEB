@@ -14,7 +14,7 @@
     mysqli_stmt_execute($stmt);
     $result = mysqli_stmt_get_result($stmt);
     while($row = mysqli_fetch_assoc($result)) {
-    echo '<div class="casuta-animal">
+    echo '<div onclick="paginaAnimal(this)" class="casuta-animal">
         <div class="casuta-imagine">
             <div class="imagine"
                 style="background-image:url(../../img/pages/catalog/syed-ahmad-yXTr6XeJDV8-unsplash.jpg);">
