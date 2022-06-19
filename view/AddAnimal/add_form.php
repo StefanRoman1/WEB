@@ -99,7 +99,7 @@
 
                 <div>
                     <label for="descriere-hrana" class="font">Despre hrana:</label><br>
-                    <textarea id="descriere-hrana" name="descirere-hrana" rows="10" cols="30" class="textarea font"></textarea>
+                    <textarea id="descriere-hrana" name="descriere-hrana" rows="10" cols="30" class="textarea font"></textarea>
                 </div>
 
                 <div>

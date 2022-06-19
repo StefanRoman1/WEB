@@ -1,41 +1,60 @@
 <?php 
     include "database.php";
-
-    function get_animals() {
-        global $db;
-        $query = 'SELECT * FROM animals WHERE a_id = 4';
-        $statement = $db->prepare($query);
-        $statement->execute();
-        $animal_info = $statement->fetchAll();
-        $statement->closeCursor();
-        return $animal_info;
-    }
     
-    function get_animal_by_name($name){
+    function get_animal_by_name($nume){
         global $db;
-        $query = 'SELECT * FROM animals WHERE NUME = :name';
+        $query = 'SELECT * FROM animals WHERE NUME = :nume';
         $statement = $db->prepare($query);
-        $statement->bindValue(':name', $name);
+        $statement->bindValue(':nume', $nume);
         $statement->execute();
         $animal_info = $statement->fetchAll();
         $statement->closeCursor();
         return $animal_info;
     }
 
-    function add_animal($name, $description){
+    function add_animal($nume, $denumire_stiintifica, $descriere, $statut, $clasa_biologica, $habitat, $continent, $raspandire, $trasaturi_distinctive, $hrana, $descriere_hrana, $viata_sociala, $descriere_viata_sociala, $reproducere, $altele){
         global $db;
-        if(empty($id = get_animal_by_name($name))){
-            $query = "INSERT INTO animals (nume, descriere) VALUES ('$name', '$description')";
-            $db->exec($query);
+        if(empty($id = get_animal_by_name($nume))){
+            $query = "INSERT INTO animals (nume, denumire_stiintifica, descriere, f_statut, f_clasa_biologica, f_habitat, f_continent, raspandire, trasaturi_distinctive, f_hrana, descriere_hrana, f_viata_sociala, descriere_viata_sociala, reproducere, altele) VALUES (:nume, :denumire_stiintifica, :descriere, :statut, :clasa_biologica, :habitat, :continent, :raspandire, :trasaturi_distinctive, :hrana, :descriere_hrana, :viata_sociala, :descriere_viata_sociala, :reproducere, :altele)";
+            $statement = $db->prepare($query);
+            $statement->bindValue(':nume', $nume);
+            $statement->bindValue(':denumire_stiintifica', $denumire_stiintifica);
+            $statement->bindValue(':descriere', $descriere);
+            $statement->bindValue(':statut', $statut);
+            $statement->bindValue(':clasa_biologica', $clasa_biologica);
+            $statement->bindValue(':habitat', $habitat);
+            $statement->bindValue(':continent', $continent);
+            $statement->bindValue(':raspandire', $raspandire);
+            $statement->bindValue(':trasaturi_distinctive', $trasaturi_distinctive);
+            $statement->bindValue(':hrana', $hrana);
+            $statement->bindValue(':descriere_hrana', $descriere_hrana);
+            $statement->bindValue(':viata_sociala', $viata_sociala);
+            $statement->bindValue(':descriere_viata_sociala', $descriere_viata_sociala);
+            $statement->bindValue(':reproducere', $reproducere);
+            $statement->bindValue(':altele', $altele);
+            $statement->execute();        
         }
         else{
-            $query = 'UPDATE animals SET nume =:name, descriere = :description WHERE nume =:name';
+            $query = 'UPDATE animals SET nume =:nume, denumire_stiintifica=:denumire_stiintifica, descriere = :descriere, f_statut=:statut, f_clasa_biologica=:clasa_biologica, f_habitat=:habitat, f_continent=:continent, raspandire=:raspandire, trasaturi_distinctive=:trasaturi_distinctive, f_hrana=:hrana, descriere_hrana=:descriere_hrana, f_viata_sociala=:viata_sociala, descriere_viata_sociala=:descriere_viata_sociala, reproducere=:reproducere, altele=:altele WHERE nume =:name';
             $statement = $db->prepare($query);
-            $statement->bindValue(':name', $name);
-            $statement->bindValue(':description', $description);
-            //$statement->bindValue(':id', $id);
+            $statement->bindValue(':nume', $nume);
+            $statement->bindValue(':denumire_stiintifica', $denumire_stiintifica);
+            $statement->bindValue(':descriere', $descriere);
+            $statement->bindValue(':statut', $statut);
+            $statement->bindValue(':clasa_biologica', $clasa_biologica);
+            $statement->bindValue(':habitat', $habitat);
+            $statement->bindValue(':continent', $continent);
+            $statement->bindValue(':raspandire', $raspandire);
+            $statement->bindValue(':trasaturi_distinctive', $trasaturi_distinctive);
+            $statement->bindValue(':hrana', $hrana);
+            $statement->bindValue(':descriere_hrana', $descriere_hrana);
+            $statement->bindValue(':viata_sociala', $viata_sociala);
+            $statement->bindValue(':descriere_viata_sociala', $descriere_viata_sociala);
+            $statement->bindValue(':reproducere', $reproducere);
+            $statement->bindValue(':altele', $altele);
             $statement->execute();
         }
+        $statement->closeCursor();
     }
 
     function get_animals_for_catalog(){

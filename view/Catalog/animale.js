@@ -19,6 +19,7 @@ function filtruAnimale(el) {
 }
 
 
+
 // GESTIUNEA AFISARII TIPULUI DE GRID
 let lastGrid = "grid-patrate";
 
