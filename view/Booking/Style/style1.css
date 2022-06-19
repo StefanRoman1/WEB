@@ -1,61 +1,289 @@
-body {
-    width: 500px;
-    margin: 0 auto;
-    padding: 50px;
-  }
-  
-  div.elem-group {
-    margin: 20px 0;
-  }
-  
-  div.elem-group.inlined {
-    width: 49%;
-    display: inline-block;
-    float: left;
-    margin-left: 1%;
-  }
-  
-  label {
-    display: block;
-    font-family: 'Nanum Gothic';
-    padding-bottom: 10px;
-    font-size: 1.25em;
-  }
-  
-  input, select, textarea {
-    border-radius: 2px;
-    border: 2px solid #777;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
-    font-size: 1.25em;
-    font-family: 'Nanum Gothic';
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
     width: 100%;
-    padding: 10px;
-  }
-  
-  div.elem-group.inlined input {
-    width: 95%;
-    display: inline-block;
-  }
-  
-  textarea {
-    height: 250px;
-  }
-  
-  hr {
-    border: 1px dotted #ccc;
-  }
-  
-  button {
+    min-height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url(backgr.jpg);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container {
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 400px;
+    min-height: 400px;
+    background: #FFF;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0,0,0,.3);
+    padding: 40px 30px;
+}
+
+.container .login-text {
+    color: #111;
+    font-weight: 500;
+    font-size: 1.1rem;
+    text-align: center;
+    margin-bottom: 20px;
+    display: block;
+    text-transform: capitalize;
+}
+
+.container .login-social {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
+    margin-bottom: 25px;
+}
+
+.container .login-social a {
+    padding: 12px;
+    margin: 10px;
+    border-radius: 3px;
+    box-shadow: 0 0 5px rgba(0,0,0,.3);
+    text-decoration: none;
+    font-size: 1rem;
+    text-align: center;
+    color: #FFF;
+    transition: .3s;
+}
+
+.container .login-social a i {
+    margin-right: 5px;
+}
+
+.container .login-social a.facebook {
+    background: #4267B2;
+}
+
+.container .login-social a.twitter {
+    background: #1DA1F2;
+}
+
+.container .login-social a.google-plus {
+    background: #db4a39;
+}
+
+.container .login-social a.linkedin {
+    background: #0e76a8;
+}
+
+.container .login-social a.facebook:hover {
+    background: #3d5fa3;
+}
+
+.container .login-social a.twitter:hover {
+    background: #1991db;
+}
+
+.container .login-social a.google-plus:hover {
+    background: #ca4334;
+}
+
+.container .login-social a.linkedin:hover {
+    background: #0b5c81;
+}
+
+.container .login-email .input-group {
+    width: 100%;
     height: 50px;
-    background: orange;
+    margin-bottom: 25px;
+}
+
+.container .login-email .input-group input {
+    width: 100%;
+    height: 100%;
+    border: 2px solid #e7e7e7;
+    padding: 15px 20px;
+    font-size: 1rem;
+    border-radius: 30px;
+    background: transparent;
+    outline: none;
+    transition: .3s;
+}
+
+.container .login-email .input-group input:focus, .container .login-email .input-group input:valid {
+    border-color: #a29bfe;
+}
+
+.container .login-email .input-group .btn {
+    display: block;
+    width: 100%;
+    padding: 15px 20px;
+    text-align: center;
     border: none;
-    color: white;
-    font-size: 1.25em;
-    font-family: 'Nanum Gothic';
-    border-radius: 4px;
+    background: #a29bfe;
+    outline: none;
+    border-radius: 30px;
+    font-size: 1.2rem;
+    color: #FFF;
     cursor: pointer;
-  }
-  
-  button:hover {
-    border: 2px solid black;
-  }
+    transition: .3s;
+}
+
+.container .login-email .input-group .btn:hover {
+    transform: translateY(-5px);
+    background: #6c5ce7;
+}
+
+.login-register-text {
+    color: #111;
+    font-weight: 600;
+}
+
+.login-register-text a {
+    text-decoration: none;
+    color: #6c5ce7;
+}
+
+@media (max-width: 430px) {
+    .container {
+        width: 300px;
+    }
+    .container .login-social {
+        display: block;
+    }
+    .container .login-social a {
+        display: block;
+    }
+}
+
+/*---------------------------------------*/
+
+.menu {
+    background-color: #22a244;
+    list-style-type: none;
+    position: sticky;
+    font-size: 17px;
+    width: 100%;
+    height: 80px;
+    top: 0px;
+}
+
+.item a {
+    text-decoration: none;
+    color: #f2f2f2;
+    text-transform: uppercase;
+    padding: 10px 15px;
+    border-radius: 3px;
+    background-color: #22a244;
+}
+
+.toggle {
+    background-color: #22a244;
+    color: #f2f2f2;
+    font-size: 30px;
+    float: right;
+    margin-right: 40px;
+    cursor: pointer;
+    padding: 10px 15px;
+    border-radius: 3px;
+    margin-top: 13px;
+    margin-bottom: auto;
+    display: none;
+    align-content: center;
+}
+
+#check {
+    display: none;
+}
+
+.toggle:hover {
+    background-color: #0e251a;
+    transition: all .5s;
+}
+
+.toggle i {
+    background-color: #22a244;
+}
+
+.toggle:hover i {
+    background-color: #0e251a;
+    transition: .5s;
+}
+
+.logo {
+    background-color: #22a244;
+    width: 115px;
+    padding: 15px 0px 13px 40px;
+}
+
+.menu ul {
+    background-color: #22a244;
+    float: right;
+    margin-right: 20px;
+}
+
+.menu ul li {
+    background-color: #22a244;
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+
+.item a:hover {
+    background-color: #0e251a;
+    transition: .5s;
+}
+
+#logout {
+    display: none;
+}
+
+@media only screen and (max-width:850px) {
+    .toggle {
+        display: block;
+        background-color: #22a244;
+    }
+
+    .toggle i {
+        background-color: #22a244;
+    }
+
+    .menu {
+        position: absolute;
+    }
+
+    .menu ul {
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        background-color: #0d7529;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+
+    .menu ul li {
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+        background-color: #0d7529;
+    }
+
+    .menu ul li a {
+        font-size: 20px;
+        background-color: #0d7529;
+    }
+
+    .menu ul li a:hover {
+        background: none;
+        color: #0e251a;
+        transition: none;
+    }
+
+    #check:checked~ul {
+        left: 0;
+        z-index: 20;
+    }
+}

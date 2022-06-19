@@ -1,9 +1,9 @@
 <?php 
 
 $server = "localhost";
-$user = "tudor";
-$pass = "tudor";
-$database = "gradina_zoo";
+$user = "root";
+$pass = "";
+$database = "login_register";
 
 $conn = mysqli_connect($server, $user, $pass, $database);
 

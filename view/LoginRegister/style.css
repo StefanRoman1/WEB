@@ -14,11 +14,15 @@ body {
     background-position: center;
     background-size: cover;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    /* justify-content: center; */
+
     align-items: center;
 }
 
 .container {
+    margin-top: auto;
+    margin-bottom: auto;
     width: 400px;
     min-height: 400px;
     background: #FFF;
@@ -152,5 +156,136 @@ body {
     }
     .container .login-social a {
         display: block;
+    }
+}
+
+/*---------------------------------------*/
+
+.menu {
+    background-color: #22a244;
+    list-style-type: none;
+    position: sticky;
+    font-size: 17px;
+    width: 100%;
+    height: 80px;
+    top: 0px;
+}
+
+.item a {
+    text-decoration: none;
+    color: #f2f2f2;
+    text-transform: uppercase;
+    padding: 10px 15px;
+    border-radius: 3px;
+    background-color: #22a244;
+}
+
+.toggle {
+    background-color: #22a244;
+    color: #f2f2f2;
+    font-size: 30px;
+    float: right;
+    margin-right: 40px;
+    cursor: pointer;
+    padding: 10px 15px;
+    border-radius: 3px;
+    margin-top: 13px;
+    margin-bottom: auto;
+    display: none;
+    align-content: center;
+}
+
+#check {
+    display: none;
+}
+
+.toggle:hover {
+    background-color: #0e251a;
+    transition: all .5s;
+}
+
+.toggle i {
+    background-color: #22a244;
+}
+
+.toggle:hover i {
+    background-color: #0e251a;
+    transition: .5s;
+}
+
+.logo {
+    background-color: #22a244;
+    width: 115px;
+    padding: 15px 0px 13px 40px;
+}
+
+.menu ul {
+    background-color: #22a244;
+    float: right;
+    margin-right: 20px;
+}
+
+.menu ul li {
+    background-color: #22a244;
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+
+.item a:hover {
+    background-color: #0e251a;
+    transition: .5s;
+}
+
+#logout {
+    display: none;
+}
+
+@media only screen and (max-width:850px) {
+    .toggle {
+        display: block;
+        background-color: #22a244;
+    }
+
+    .toggle i {
+        background-color: #22a244;
+    }
+
+    .menu {
+        position: absolute;
+    }
+
+    .menu ul {
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        background-color: #0d7529;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+
+    .menu ul li {
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+        background-color: #0d7529;
+    }
+
+    .menu ul li a {
+        font-size: 20px;
+        background-color: #0d7529;
+    }
+
+    .menu ul li a:hover {
+        background: none;
+        color: #0e251a;
+        transition: none;
+    }
+
+    #check:checked~ul {
+        left: 0;
+        z-index: 20;
     }
 }
