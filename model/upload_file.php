@@ -13,9 +13,21 @@
                     echo "Sorry, there was an error uploading your file.";
                 }
                 $xml=simplexml_load_file('uploadedfile') or die("Error: Cannot create object");
-                $name = (string) $xml->name;
-                $description = (string) $xml->description;
-                //add_animal($name, $description);
+                $nume = (string) $xml->nume;
+                $denumire_stiintifica = (string) $xml->denumire_stiintifica;
+                $descriere = (string) $xml->descriere;
+                $statut = (string) $xml->statut;
+                $clasa_biologica = (string) $xml->clasa_biologica;
+                $habitat = (string) $xml->habitat;
+                $continent = (string) $xml->continent;
+                $raspandire = (string) $xml->raspandire;
+                $trasaturi_distinctive = (string) $xml->trasaturi_distinctive;
+                $descriere_hrana = (string) $xml->descriere_hrana;
+                $viata_sociala = (string) $xml->viata_sociala;
+                $descriere_viata_sociala = (string) $xml->descriere_viata_sociala;
+                $reproducere = (string) $xml->reproducere;
+                $altele = (string) $xml->altele;
+                add_animal($nume, $denumire_stiintifica, $descriere, $statut, $clasa_biologica, $habitat, $continent, $raspandire, $trasaturi_distinctive, $hrana, $descriere_hrana, $viata_sociala, $descriere_viata_sociala, $reproducere, $altele);
                 return true;
             }
             else{

@@ -1,6 +1,6 @@
 <?php
 include "nav.php";
-//include "../../model/animale_db.php";
+include "../../model/animale_db.php";
 include "../../model/upload_file.php";
 
 if($_SERVER['REQUEST_METHOD'] === 'GET'){
