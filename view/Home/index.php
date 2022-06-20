@@ -108,9 +108,7 @@ else {
        </p>
        <br><br>
        <p class = "text">
-        <form>
             <button class="button" onclick="alertFunction('<?php echo($logat)?>')"><span>Rezerva </span></button>
-        </form>
        </p>
        <h1 class = "title" id="echipa"> Staff </h1>
        <p class="text">

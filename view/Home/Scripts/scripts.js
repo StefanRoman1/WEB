@@ -5,7 +5,7 @@ function topFunction() {
 
 function alertFunction(isSesion) {
   if(isSesion) {
-    window.location = "Proiect gros/WEB/view/Booking/index.html";
+    window.location.href = '../Booking/index.html';
   }
   else
     alert('You are not logged in!');
