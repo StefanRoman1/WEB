@@ -1,93 +1,28 @@
-<?php
-include_once '../../model/config.php';
-
-session_start();
-
-error_reporting(0);
-
-if (isset($_SESSION['username'])) {
-    $logat = true;
-    echo "<p>".$_SESSION['is_admin']."</p>";
-}
-else {
-    $logat = false;
-    echo "<p>nu este </p>";
-}
-
-?>
-
 <!DOCTYPE html>
 <html>
     <head>
         <link href="./resurse/resurse.css" type="text/css" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
         <script src="Scripts/scripts.js"></script>
-        <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
         <title>FIMURO</title>
     </head>
     <body class = "background">
         <button onclick="topFunction()" id="to-top-button" title="Mergi la început">
             <i class="fa fa-arrow-up" aria-hidden="true"></i>
         </button>
-        <div class="menu" id="nav-placeholder">
-            
-        </div>
-        
-
-        <?php 
-
-            include_once '../../model/config.php';
-
-            session_start();
-
-            error_reporting(0);
-
-            $sql = "";
-
-            if (isset($_SESSION['username'])) {
-                $logat = true;
-                // $user = $_
-                $sql = "SELECT is_admin FROM users WHERE username = '".$_SESSION['username']."'";
-		        $stmt = mysqli_stmt_init($conn);
-                if(!mysqli_stmt_prepare($stmt,$sql)) {
-                    echo "<h2>Conectare esuata</h2>";
-                }
-                else {
-                    mysqli_stmt_execute($stmt);
-                    $result = mysqli_stmt_get_result($stmt);
-                    while($row = mysqli_fetch_assoc($result)){
-                        if($row['is_admin']==1)
-                        {
-                            echo '<script>
-                                $(function(){
-                                $("#nav-placeholder").load("../Navs/nav_admin.html");
-                                });
-                            </script>';
-                        }
-                        else
-                        {echo '<script>
-                            $(function(){
-                            $("#nav-placeholder").load("../Navs/nav_logat.html");
-                            });
-                        </script>';}
-                    }
-                }
-                
-            }
-            else {
-                $logat = false;
-                echo '<script>
-                        $(function(){
-                        $("#nav-placeholder").load("../Navs/nav_nelogat.html");
-                        });
-                    </script>';
-            }
-
-        ?>
-
-
-
-
+        <nav class="menu">
+            <input type="checkbox" id="check">
+            <label for="check" class="toggle"><i class="fas fa-bars"></i></label>
+            <img class="logo" src="../../img/pages/tigru.jpg">
+            <ul>
+                <li class = "item"><a href="../Catalog/animale.html">Catalog</a></li>
+                <li class = "item"><a href="#program">Program</a></li>
+                <li class = "item"><a href="#harta">Harta</a></li>
+                <li class = "item"><a href="#rezerva">Rezerva un loc</a></li>
+                <li class = "item"><a href="#echipa">Staff</a></li>
+                <li class = "item"><a href="../LoginRegister/index.php">Login</a></li>
+            </ul>
+        </nav>
         <header id='intro'></header>
         <h1 class = "title">
              Descriere
@@ -153,7 +88,9 @@ else {
        </p>
        <br><br>
        <p class = "text">
-            <button class="button" onclick="alertFunction('<?php echo($logat)?>')"><span>Rezerva </span></button>
+        <form action="../Booking/index.html">
+            <button class="button" onclick="alertFunction()"><span>Rezerva </span></button>
+        </form>
        </p>
        <h1 class = "title" id="echipa"> Staff </h1>
        <p class="text">
