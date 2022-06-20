@@ -8,14 +8,16 @@ function restrangereOptiuniSortare() {
 }
 
 
-// FUNCTII DE GESTIONAT FILTRELE
-function filtruClickEvent(el) {
+ // FUNCTII DE GESTIONAT FILTRELE
+ function filtruClickEvent(el) {
     el.parentElement.classList.toggle("show");
 }
 
-function filtruAnimale(el) {
-    var filtru = el.nextElementSibling.innerHTML;
-    
+function afisareFiltre() {
+    if(document.getElementsByClassName("toate-filtrele")[0].style.display == "block")
+        document.getElementsByClassName("toate-filtrele")[0].style.display = "none";
+    else
+        document.getElementsByClassName("toate-filtrele")[0].style.display = "block";
 }
 
 

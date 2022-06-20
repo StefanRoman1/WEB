@@ -22,6 +22,7 @@
                 $continent = (string) $xml->continent;
                 $raspandire = (string) $xml->raspandire;
                 $trasaturi_distinctive = (string) $xml->trasaturi_distinctive;
+                $hrana = (string) $xml->hrana;
                 $descriere_hrana = (string) $xml->descriere_hrana;
                 $viata_sociala = (string) $xml->viata_sociala;
                 $descriere_viata_sociala = (string) $xml->descriere_viata_sociala;
