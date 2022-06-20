@@ -6,7 +6,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body class = "background">
-    <a><img src = "../../img/animals/saasimagineprincipala"></a>
         <form action="adaugare.php" method="post" class="form-placement box font" enctype="multipart/form-data">
                 <h1>Adauga animal</h1>
                 <div>
