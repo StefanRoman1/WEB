@@ -120,7 +120,7 @@
             Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
         </p>    
         <br><br><br>
-        <img src="../../img/pages/acasa/zoo.jpg" class="map">
+        <img src="../../img/pages/acasa/zoo.jpg" alt="zoo" class="map">
         <br><br><br>
         <p class = "text">
             Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
@@ -144,18 +144,18 @@
         </p>    
         <div class="row">
             <div class="column">
-                <img src="../../img/pages/acasa/yeu1.jpg" class = "staff">
+                <img src="../../img/pages/acasa/yeu1.jpg" alt="stefan" class = "staff">
                 <p class="text">Roman Stefan</p>
                 <p class="text">"Descriere personala" </p> 
             </div>
             <div class="column">
-                <img src="../../img/pages/acasa/tudorel1.jpg" class = "staff">
+                <img src="../../img/pages/acasa/tudorel1.jpg" alt="tudor" class = "staff">
                 <p class="text">Filip Tudor</p>
                 <p class="text">"Descriere personala" </p>
             
             </div>
             <div class="column">
-                <img src="../../img/pages/acasa/munte.jpg" class = "staff">
+                <img src="../../img/pages/acasa/munte.jpg" alt="munteanu" class = "staff">
                 <p class="text">Munteanu Stefan</p>
                 <p class="text">"Descriere personala"</p>
             </div>
