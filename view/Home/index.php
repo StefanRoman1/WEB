@@ -7,10 +7,12 @@ session_start();
 error_reporting(0);
 
 if (isset($_SESSION['username'])) {
+    $logat = true;
     echo "<p>Aici e logat cineva deja!!!!!!</p>";
 }
 else {
-    echo "<p> nu este </p>";
+    $logat = false;
+    echo "<p>nu este </p>";
 }
 
 ?>
@@ -21,6 +23,7 @@ else {
         <link href="./resurse/resurse.css" type="text/css" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
         <script src="Scripts/scripts.js"></script>
+        <!-- <script src="https://code.jquery.com/jquery-1.10.2.js"></script> -->
         <title>FIMURO</title>
     </head>
     <body class = "background">
@@ -105,9 +108,7 @@ else {
        </p>
        <br><br>
        <p class = "text">
-        <form action="../Booking/index.html">
-            <button class="button" onclick="alertFunction()"><span>Rezerva </span></button>
-        </form>
+            <button class="button" onclick="alertFunction('<?php echo($logat)?>')"><span>Rezerva </span></button>
        </p>
        <h1 class = "title" id="echipa"> Staff </h1>
        <p class="text">
