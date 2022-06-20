@@ -1,21 +1,3 @@
-<?php
-include_once '../../model/config.php';
-
-session_start();
-
-error_reporting(0);
-
-if (isset($_SESSION['username'])) {
-    $logat = true;
-    echo "<p>".$_SESSION['is_admin']."</p>";
-}
-else {
-    $logat = false;
-    echo "<p>nu este </p>";
-}
-
-?>
-
 <!DOCTYPE html>
 <html>
     <head>
