@@ -46,7 +46,7 @@
             $filename = $_FILES['mainimg']['name'];
             $ext = pathinfo($filename, PATHINFO_EXTENSION);
             //checks if the uploaded file is 
-            if($ext == 'png'){
+            if($ext == 'png' || $ext == 'jpg'){
                 if (move_uploaded_file($_FILES["mainimg"]["tmp_name"], $target_path.$nume.'_mainimg')) {
                     echo "The file has been uploaded.";
                 } 
@@ -59,7 +59,7 @@
             $filename = $_FILES['habitatimg']['name'];
             $ext = pathinfo($filename, PATHINFO_EXTENSION);
             //checks if the uploaded file is 
-            if($ext == 'png'){
+            if($ext == 'png' || $ext == 'jpg'){
                 if (move_uploaded_file($_FILES["habitatimg"]["tmp_name"], $target_path.$nume.'_habitatimg')) {
                     echo "The file has been uploaded.";
                 } 
@@ -72,7 +72,7 @@
             $filename = $_FILES['trasaturiimg']['name'];
             $ext = pathinfo($filename, PATHINFO_EXTENSION);
             //checks if the uploaded file is 
-            if($ext == 'png'){
+            if($ext == 'png' || $ext == 'jpg'){
                 if (move_uploaded_file($_FILES["trasaturiimg"]["tmp_name"], $target_path.$nume.'_trasaturiimg')) {
                     echo "The file has been uploaded.";
                 } 
@@ -85,7 +85,7 @@
             $filename = $_FILES['hranaimg']['name'];
             $ext = pathinfo($filename, PATHINFO_EXTENSION);
             //checks if the uploaded file is 
-            if($ext == 'png'){
+            if($ext == 'png' || $ext == 'jpg'){
                 if (move_uploaded_file($_FILES["hranaimg"]["tmp_name"], $target_path.$nume.'_hranaimg')) {
                     echo "The file has been uploaded.";
                 } 
@@ -98,7 +98,7 @@
             $filename = $_FILES['socialimg']['name'];
             $ext = pathinfo($filename, PATHINFO_EXTENSION);
             //checks if the uploaded file is 
-            if($ext == 'png'){
+            if($ext == 'png' || $ext == 'jpg'){
                 if (move_uploaded_file($_FILES["socialimg"]["tmp_name"], $target_path.$nume.'_socialimg')) {
                     echo "The file has been uploaded.";
                 } 
@@ -111,7 +111,7 @@
             $filename = $_FILES['reproducereimg']['name'];
             $ext = pathinfo($filename, PATHINFO_EXTENSION);
             //checks if the uploaded file is 
-            if($ext == 'png'){
+            if($ext == 'png' || $ext == 'jpg'){
                 if (move_uploaded_file($_FILES["reproducereimg"]["tmp_name"], $target_path.$nume.'_reproducereimg')) {
                     echo "The file has been uploaded.";
                 } 
