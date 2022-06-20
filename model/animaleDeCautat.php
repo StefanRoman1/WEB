@@ -19,7 +19,7 @@ if(strlen($animal)) {
             $animaleAfisate = $animaleAfisate . '<div class="casuta-animal">
                 <div class="casuta-imagine">
                     <div class="imagine"
-                        style="background-image:url(../../img/pages/catalog/syed-ahmad-yXTr6XeJDV8-unsplash.jpg);">
+                        style="background-image:url(../../img/animals/'.$row['nume'].'_mainimg);">
                     </div>
                 </div>
                 <div class="detalii-animal-casuta">

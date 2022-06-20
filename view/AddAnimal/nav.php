@@ -1,8 +1,10 @@
-<div class="topnav">
-            <a href="#loggo" class="loggo"><img src = "poza.png" width = 30px;></a>
-            <a href="#animale">Toate animalele</a>
-            <a href="#program">Program</a>
-            <a href="#harta">Harta</a>
-            <a href="#rezervari">Rezerva un loc!</a>
-            <a href="#echipa">Staff</a>
-</div> 
+<nav class="menu">
+    <input type="checkbox" id="check">
+    <label for="check" class="toggle"><i class="fas fa-bars"></i></label>
+    <img class="logo" src="../../img/pages/tigru.jpg">
+    <ul>
+        <li class = "item"><a href="../Catalog/animale.html">Catalog</a></li>
+        <li class = "item"><a href="../AddAnimal/adaugare.php">Adaugare Animal</a></li>
+        <li class = "item"><a href="../LoginRegister/logout.php">Logout</a></li>
+    </ul>
+</nav>

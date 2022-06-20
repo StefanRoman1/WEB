@@ -158,7 +158,7 @@
 
                 <div>
                     <label for="uploadedfile" class="font">Incarca fisier XML:</label>
-                    <input type="file" id="uploadedfile" name="uploadedfile" class="font" required>
+                    <input type="file" id="uploadedfile" name="uploadedfile" class="font">
                 </div>
 
                 <div class="bottom-padding font">
