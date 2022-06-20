@@ -56,15 +56,6 @@ if (isset($_POST['submit'])) {
 	<title>Inregistrare cont</title>
 </head>
 <body>
-	<nav class="menu">
-		<input type="checkbox" id="check">
-		<label for="check" class="toggle"><i class="fas fa-bars"></i></label>
-		<img class="logo" src="../../img/pages/tigru.jpg">
-		<ul>
-			<li class = "item"><a href="../Catalog/animale.html">Catalog</a></li>
-			<li class = "item"><a href="../Home/index.php">Home</a></li>
-		</ul>
-	</nav>
 	<div class="container">
 		<form action="" method="POST" class="login-email">
             <p class="login-text" style="font-size: 2rem; font-weight: 800;">Register</p>

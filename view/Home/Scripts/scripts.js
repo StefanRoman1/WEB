@@ -3,10 +3,6 @@ function topFunction() {
     document.documentElement.scrollTop = 0;
   }
 
-function alertFunction(isSesion) {
-  if(isSesion) {
-    window.location.href = '../Booking/index.html';
-  }
-  else
-    alert('You are not logged in!');
+function alertFunction() {
+  alert('Tou are not logged in!');
 }

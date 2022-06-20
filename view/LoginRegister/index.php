@@ -7,7 +7,7 @@ session_start();
 error_reporting(0);
 
 if (isset($_SESSION['username'])) {
-    header("Location: ../Home/index.php");
+    header("Location: welcome.php");
 }
 
 if (isset($_POST['submit'])) {
@@ -19,7 +19,7 @@ if (isset($_POST['submit'])) {
 	if ($result->num_rows > 0) {
 		$row = mysqli_fetch_assoc($result);
 		$_SESSION['username'] = $row['username'];
-		header("Location: ../Home/index.php");
+		header("Location: welcome.php");
 	} else {
 		echo "<script>alert('Woops! Email or Password is Wrong.')</script>";
 	}
@@ -32,22 +32,14 @@ if (isset($_POST['submit'])) {
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+
 	<link rel="stylesheet" type="text/css" href="style.css">
 
 	<title>Conectare cont</title>
 </head>
 <body>
-	<nav class="menu">
-		<input type="checkbox" id="check">
-		<label for="check" class="toggle"><i class="fas fa-bars"></i></label>
-		<img class="logo" src="../../img/pages/tigru.jpg">
-		<ul>
-			<li class = "item"><a href="../Catalog/animale.html">Catalog</a></li>
-			<li class = "item"><a href="../Home/index.php">Home</a></li>
-		</ul>
-	</nav>
 	<div class="container">
 		<form action="" method="POST" class="login-email">
 			<p class="login-text" style="font-size: 2rem; font-weight: 800;">Login</p>

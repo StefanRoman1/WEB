@@ -1,6 +1,6 @@
 <?php
 include "nav.php";
-include "../../model/animale_db.php";
+//include "../../model/animale_db.php";
 include "../../model/upload_file.php";
 
 if($_SERVER['REQUEST_METHOD'] === 'GET'){
@@ -11,9 +11,7 @@ else{
         if(isset($_POST['submit']))
         {   
             //if there is a XML file uploaded
-            if(checkfile() == true){
-                echo "Successfully uploaded xml file";
-            }
+            upload_xml();
 
             //upload to DB only if denpop (Denumire populara) field has been filled
             if(empty($_POST['denpop']) == false){ 
@@ -34,6 +32,8 @@ else{
                 $altele = $_POST['altele'];
                 add_animal($nume, $denumire_stiintifica, $descriere, $statut, $clasa_biologica, $habitat, $continent, $raspandire, $trasaturi_distinctive, $hrana, $descriere_hrana, $viata_sociala, $descriere_viata_sociala, $reproducere, $altele);
             }
+
+            upload_photos($nume);
         }
     }
 }
