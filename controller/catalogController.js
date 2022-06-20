@@ -66,7 +66,18 @@ window.onload = incarcareAnimale;
 // DESCHIDERE PAGINA ANIMAL
 function paginaAnimal(el) {
     var animalName = el.children[1].children[0].innerHTML;
-    alert(animalName);
+    
+    var xml = new XMLHttpRequest();
+    xml.onreadystatechange = function() {
+        if(this.readyState == 4 && this.status == 200) {
+            var w = window.open("Animal","_blank");
+            var d = w.document.open();
+            d.write(this.responseText);
+            d.close();
+        }
+    };
+    xml.open("GET", "../../model/crearePaginaAnimal.php?animalName="+animalName, true);
+    xml.send();
 }
 
 

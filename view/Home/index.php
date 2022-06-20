@@ -8,7 +8,7 @@ error_reporting(0);
 
 if (isset($_SESSION['username'])) {
     $logat = true;
-    echo "<p>Aici e logat cineva deja!!!!!!</p>";
+    echo "<p>".$_SESSION['is_admin']."</p>";
 }
 else {
     $logat = false;
