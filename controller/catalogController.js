@@ -68,3 +68,41 @@ function paginaAnimal(el) {
     var animalName = el.children[1].children[0].innerHTML;
     alert(animalName);
 }
+
+
+// FILTRARE ANIMALE
+var filters = [];
+var filtersName = [];
+
+function filtruAnimale(el) {
+    var numeFiltru = el.parentElement.parentElement.parentElement.firstElementChild.firstElementChild.innerHTML;
+    var filtru = el.nextElementSibling.innerHTML;
+
+    if(el.checked){
+        filtersName.push(numeFiltru);
+        filters.push(filtru);
+    } else {
+        var indexFilterName = filtersName.indexOf(numeFiltru);
+        var indexFilter = filters.indexOf(filtru);
+        if(indexFilterName > -1) filtersName.splice(indexFilterName, 1);
+        if(indexFilter > -1) filters.splice(indexFilter, 1);
+    }
+
+    var animals = document.getElementById("animale-casute");
+    var xml = new XMLHttpRequest();
+    xml.onreadystatechange = function() {
+        if(this.readyState == 4 && this.status == 200) {
+            animals.innerHTML = this.responseText;
+        }
+    };
+
+    var sendPath = "";
+    sendPath = "?numberOfFilters=" + filters.length;
+    
+    for(let i = 0; i < filters.length; i++) {
+        sendPath = sendPath + "&filterName"+i+"="+filtersName[i]+"&filter"+i+"="+filters[i];
+    }
+    console.log(sendPath);
+    xml.open("GET", "../../model/afisareAnimaleDupaFiltre.php"+sendPath, true);
+    xml.send();
+}
